@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3876.2705,15.656531,2783.1191};
-		dir[]={-0.91657764,-0.39685717,-0.04888517};
-		up[]={-0.39629391,0.91788036,-0.02113612};
-		aside[]={-0.053258758,0,0.99858069};
+		pos[]={3906.1177,49.472065,2803.718};
+		dir[]={-0.74083751,-0.65901452,-0.13000028};
+		up[]={-0.64909804,0.75211918,-0.11390287};
+		aside[]={-0.17284064,4.2520696e-008,0.98497128};
 	};
 };
 binarizationWanted=0;
@@ -1623,7 +1623,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=318;
+		items=317;
 		class Item0
 		{
 			dataType="Logic";
@@ -29858,23 +29858,6 @@ class Mission
 			id=1593;
 			type="VirtualCurator_F";
 			atlOffset=-0.00037765503;
-		};
-		class Item317
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3878.104,12.543283,2777.3762};
-				angles[]={6.2731905,0,0.014998405};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1596;
-			type="rhsusf_weapon_crate";
-			atlOffset=9.5367432e-007;
 		};
 	};
 	class Connections
