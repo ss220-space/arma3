@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1599;
+		nextID=1601;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=199;
+		nextID=235;
 	};
 	class Camera
 	{
-		pos[]={4020.0408,140.49832,4007.1711};
-		dir[]={0.10562174,-0.25204855,-0.96193337};
-		up[]={0.027509978,0.96771455,-0.25054279};
-		aside[]={-0.99402583,0,-0.10914554};
+		pos[]={3857.2275,238.22748,5982.4063};
+		dir[]={0.23240745,-0.59496856,-0.76948816};
+		up[]={0.17203784,0.80370265,-0.56960654};
+		aside[]={-0.95734614,1.3238605e-007,-0.28914294};
 	};
 };
 binarizationWanted=0;
@@ -3117,7 +3117,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=318;
+		items=320;
 		class Item0
 		{
 			dataType="Logic";
@@ -31463,6 +31463,37 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item318
+		{
+			dataType="Trigger";
+			position[]={3897.0801,39.621613,5812.3838};
+			angle=2.8255484;
+			class Attributes
+			{
+				name="REDTEAM";
+				sizeA=85;
+				sizeB=60;
+				isRectangle=1;
+			};
+			id=1599;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item319
+		{
+			dataType="Trigger";
+			position[]={3859.2549,11.412484,2779.031};
+			angle=1.3124875;
+			class Attributes
+			{
+				name="BLUTEAM";
+				sizeA=80;
+				sizeB=105;
+				isRectangle=1;
+			};
+			id=1600;
+			type="EmptyDetectorAreaR50";
+			atlOffset=9.5367432e-007;
 		};
 	};
 	class Connections
