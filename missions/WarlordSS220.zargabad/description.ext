@@ -31,7 +31,11 @@ cba_settings_hasSettingsFile = 1;
 ///
 //Раздел кастомных функций 
 ///
-//class CfgFunctions{};
+class CfgFunctions
+{
+	#include "CfgFunctions.hpp"
+};
+
 //Функция вызова переснарядки магазинов - Shield
 class Extended_PreInit_EventHandlers
 {
