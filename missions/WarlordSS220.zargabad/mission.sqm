@@ -373,6 +373,7 @@ class ScenarioData
 		gameType="Warlords";
 		minPlayers=2;
 		maxPlayers=104;
+		playerCountMultipleOf=0;
 	};
 	wreckManagerMode=1;
 	wreckLimit=40;
