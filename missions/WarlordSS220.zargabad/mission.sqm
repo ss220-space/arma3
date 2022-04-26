@@ -3089,7 +3089,7 @@ class Mission
 								"SCALAR"
 							};
 						};
-						value=5;
+						value=2;
 					};
 				};
 			};
