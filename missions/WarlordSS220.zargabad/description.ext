@@ -132,7 +132,7 @@ class CfgWLRequisitionPresets
 				};
 				class rhsusf_stryker_m1126_m2_wd
 				{
-					cost=2200;
+					cost=2600;
 					requirements[]={};
 				};
 				class rhsusf_stryker_m1126_mk19_wd
@@ -142,7 +142,7 @@ class CfgWLRequisitionPresets
 				};
 				class rhsusf_stryker_m1132_m2_wd
 				{
-					cost=2600;
+					cost=2800;
 					requirements[]={};
 				};
 				class rhsusf_stryker_m1134_wd
@@ -152,7 +152,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_M6_wd
 				{
-					cost=4000;
+					cost=4500;
 					requirements[]={};
 				};
 				class RHS_M2A3_wd
@@ -496,12 +496,12 @@ class CfgWLRequisitionPresets
 				};
 				class rhs_btr80_vdv
 				{
-					cost=2000;
+					cost=2500;
 					requirements[]={};
 				};
 				class rhs_btr80a_vdv
 				{
-					cost=2200;
+					cost=3000;
 					requirements[]={};
 				};
 				class rhs_zsu234_aa
@@ -511,22 +511,22 @@ class CfgWLRequisitionPresets
 				};
 				class rhs_bmd1
 				{
-					cost=2500;
+					cost=3300;
 					requirements[]={};
 				};
 				class rhs_bmd1r
 				{
-					cost=2800;
+					cost=3500;
 					requirements[]={};
 				};
 				class rhs_bmd2m
 				{
-					cost=3000;
+					cost=3500;
 					requirements[]={};
 				};
 				class rhs_brm1k_vdv
 				{
-					cost=3200;
+					cost=3800;
 					requirements[]={};
 				};
 				class rhs_bmd4m_vdv
