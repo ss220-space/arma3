@@ -18,3 +18,6 @@ if (_didJIP=true;) then
 sleep 3;
 player setVariable ["BIS_WL_funds", 500];
 };
+//Отключаем AI функции игровому юниту - Shield 
+player disableAI "AUTOTARGET";
+player disableAI "RADIOPROTOCOL";
