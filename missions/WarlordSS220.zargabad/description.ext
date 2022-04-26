@@ -591,17 +591,9 @@ class CfgWLRequisitionPresets
 			};
 			class Aircraft
 			{
-				class rhs_ka60_c
-				{
-					cost=1500;
-					requirements[]=
-					{
-						"H"
-					};
-				};
 				class RHS_Mi8mt_vdv
 				{
-					cost=4500;
+					cost=2500;
 					requirements[]=
 					{
 						"H"
@@ -617,7 +609,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_Mi8mt_Cargo_vdv
 				{
-					cost=5000;
+					cost=3000;
 					requirements[]=
 					{
 						"H"
