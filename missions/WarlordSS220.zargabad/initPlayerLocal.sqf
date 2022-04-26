@@ -25,3 +25,6 @@ if ( ( west countSide allPlayers > (east countSide allPlayers)+2) or ( east coun
    ["END6",false,10] call BIS_fnc_endMission;
 };
 */
+
+//С клиента запрос на сервер для функции запрета входа в другую команду
+[player] remoteExec ["SS_fnc_Server_onConnected", 2];
