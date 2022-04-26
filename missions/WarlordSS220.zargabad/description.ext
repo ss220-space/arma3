@@ -12,7 +12,7 @@ briefingName = "SS220 Warlords (Zargabad)";
 5 = Direct
 6 = System
 */
-disableChannels[]={0,1,2,3,4,5};
+disableChannels[]={0,2,5};
 
 //Послабление настроек безопасности - Shield 
 allowFunctionsLog = 1;
