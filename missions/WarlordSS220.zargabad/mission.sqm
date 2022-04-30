@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3628.7539,219.33592,4491.3906};
-		dir[]={0.43406671,-0.0041742241,0.90088093};
-		up[]={0.0018179881,0.99998903,0.0037734176};
-		aside[]={0.9008882,3.0407682e-007,-0.43407002};
+		pos[]={4016.5439,219.33592,4221.7485};
+		dir[]={0.84644037,-0.35942614,-0.39292786};
+		up[]={0.32605189,0.9331556,-0.15135753};
+		aside[]={-0.42106572,-1.1422526e-007,-0.90705401};
 	};
 };
 binarizationWanted=0;
@@ -4187,7 +4187,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -15297,6 +15297,7 @@ class Mission
 			class Attributes
 			{
 				name="Animals";
+				activationBy="ANY";
 			};
 			id=499;
 			type="EmptyDetectorAreaR50";
@@ -15305,14 +15306,14 @@ class Mission
 		class Item222
 		{
 			dataType="Trigger";
-			position[]={4391.3188,18.189121,3985.0876};
+			position[]={4391.3188,18.189121,3985.0879};
 			class Attributes
 			{
 				name="Animals_1";
+				activationBy="ANY";
 			};
 			id=500;
 			type="EmptyDetectorAreaR50";
-			atlOffset=-1.9073486e-006;
 		};
 		class Item223
 		{
@@ -15372,10 +15373,11 @@ class Mission
 		class Item224
 		{
 			dataType="Trigger";
-			position[]={4324.4531,17.22184,4127.6743};
+			position[]={4324.4531,17.221853,4127.6738};
 			class Attributes
 			{
 				name="Animals_2";
+				activationBy="ANY";
 			};
 			id=503;
 			type="EmptyDetectorAreaR50";
@@ -15438,14 +15440,15 @@ class Mission
 		class Item226
 		{
 			dataType="Trigger";
-			position[]={4046.8662,25.101383,3558.4036};
+			position[]={4046.866,25.101353,3558.4041};
 			class Attributes
 			{
 				name="Animals_3";
+				activationBy="ANY";
 			};
 			id=505;
 			type="EmptyDetectorAreaR50";
-			atlOffset=-1.9073486e-006;
+			atlOffset=1.9073486e-006;
 		};
 		class Item227
 		{
@@ -15505,14 +15508,14 @@ class Mission
 		class Item228
 		{
 			dataType="Trigger";
-			position[]={3918.457,16.324528,4036.7292};
+			position[]={3918.457,16.324532,4036.729};
 			class Attributes
 			{
 				name="Animals_4";
+				activationBy="ANY";
 			};
 			id=507;
 			type="EmptyDetectorAreaR50";
-			atlOffset=-1.9073486e-006;
 		};
 		class Item229
 		{
@@ -15571,14 +15574,14 @@ class Mission
 		class Item230
 		{
 			dataType="Trigger";
-			position[]={4196.2065,15.402759,4701.2407};
+			position[]={4196.207,15.402761,4701.2412};
 			class Attributes
 			{
 				name="Animals_5";
+				activationBy="ANY";
 			};
 			id=509;
 			type="EmptyDetectorAreaR50";
-			atlOffset=-1.9073486e-006;
 		};
 		class Item231
 		{
