@@ -12,3 +12,5 @@
 
 // Удаление мусора с баз - Shield 
 [] execVM "scripts\garbage.sqf";
+//Добавление роли медика и инженера - Arlord
+[] execVM "scripts\onplayerRespawn.sqf";

@@ -1,30 +1,39 @@
-params ["_playerUnit", "_didJIP"];
 // Инициализация локальных параметров на стороне игрока при подключении
-
-//Отключаем AI функции игровому юниту - Shield 
-player disableAI "AUTOTARGET";
-player disableAI "RADIOPROTOCOL";
-
-// Проверка баланса команд. Относительность BLUFOR/OPFOR 1:2 - Shield
-//if ( ( west countSide allPlayers < 1) or ( east countSide allPlayers < 1) ) exitWith {};
-
 // Даем 500 очков каждому новому игроку - Shield
-if !(_didJIP) then 
-{
-sleep 10;
-player setVariable ["BIS_WL_funds", 500, true];
+player setVariable ["BIS_WL_funds", 500];
+// Классы для Американцев - Arlord
+private _typeOfPlayer = typeOf player;
+switch _typeOfPlayer do {
+case "rhsusf_army_ocp_arb_rifleman" : {
+[player,"p1_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p2_mgunner"] call BIS_fnc_addRespawnInventory;
+[player,"p4_at"] call BIS_fnc_addRespawnInventory;
+[player,"p5_mg"] call BIS_fnc_addRespawnInventory;
+[player,"p6_mg"] call BIS_fnc_addRespawnInventory;
+[player,"p7_mg"] call BIS_fnc_addRespawnInventory;
+[player,"p8_mg"] call BIS_fnc_addRespawnInventory;
+[player,"p9_mg"] call BIS_fnc_addRespawnInventory;
+[player,"p10_mg"] call BIS_fnc_addRespawnInventory;
 };
-
-// Проверка баланса команд. Относительность BLUFOR/OPFOR 1:2 - Shield
-/*
-if ( ( west countSide allPlayers > (east countSide allPlayers)+2) or ( east countSide allPlayers > (west countSide allPlayers)+1) ) then {
-
-   player enableSimulation false;
-   ["<t color='#ff0000' size = '.8'>Warning!<br />КОМАНДЫ НЕ СБАЛАНСИРОВАНЫ, BLUFOR/OPFOR БАЛАНС 1:2, СМЕНИТЕ КОМАНДУ!</t>",-1,-1,10,1,0] spawn BIS_fnc_dynamicText;
-   uisleep 10;
-   ["END6",false,10] call BIS_fnc_endMission;
+case "rhsusf_army_ocp_arb_rifleman" : {
+[player,"p3_recon"] call BIS_fnc_addRespawnInventory;
 };
-*/
-
-//С клиента запрос на сервер для функции запрета входа в другую команду
-[player] remoteExec ["SS_fnc_Server_onConnected", 2];
+};
+// Классы для Русских - Arlord
+private _typeOfPlayer = typeOf player;
+switch _typeOfPlayer do {
+case "rhs_vdv_des_rifleman" : {
+[player,"p11_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p12_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p13_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p14_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p15_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p16_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p17_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p18_eng"] call BIS_fnc_addRespawnInventory;
+[player,"p19_eng"] call BIS_fnc_addRespawnInventory;
+};
+case "rhs_vdv_des_rifleman" : {
+[player,"p3_recon"] call BIS_fnc_addRespawnInventory;
+};
+};
