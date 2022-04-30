@@ -22,7 +22,6 @@ zeusCompositionScriptLevel = 2;
 //Применение настроек CBA - Shield 
 cba_settings_hasSettingsFile = 1;
 
-
 //Include hpp файлов переснаряжения магазинов - Shield
 #include "Configs\defines.hpp"
 #include "Configs\MagRepack_Dialog_Main.hpp"
@@ -875,6 +874,29 @@ class CfgWLFactionAssets
 		};
 	};
 };
+
+//Респауны - Arlord
+respawnTemplates[] = {"MenuInventory","MenuPosition"}; 
+//Классы для Respawns- Shield
+class CfgRoles
+{
+	class Assault
+	{
+		displayName = $STR_A3_Role_Assault;
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class Support
+	{
+		displayName = $STR_A3_Role_Support;
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\support_ca.paa";
+	};
+	class Recon
+	{
+		displayName = $STR_A3_Role_Recon;
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\recon_ca.paa";
+	};
+};
+#include "cfgRespawnInventory.hpp"
 
 // Класс музыки. Пример классов для динамической музыки: - Shield 
 //class Track_Name
