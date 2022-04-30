@@ -14975,7 +14975,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="<a href='https://5g5.net/'>TS: 5g5.net </a> " \n "<br/>" \n "<a href='https://games.ss220.space'>DISCORD: games.ss220.space</a> " \n "<br/>" \n "Адрес игрового сервера: games.ss220.space:2302" \n "<br/>" \n "Приятной игры и не забудьте включить музыку в настройках игры!";
+							value="<a href=ts://178.62.217.192/'>TS: 178.62.217.192 </a> " \n "<br/>" \n "<a href='https://games.ss220.space'>DISCORD: games.ss220.space</a> " \n "<br/>" \n "Адрес игрового сервера: games.ss220.space:2302" \n "<br/>" \n "Приятной игры и не забудьте включить музыку в настройках игры!";
 						};
 					};
 				};
