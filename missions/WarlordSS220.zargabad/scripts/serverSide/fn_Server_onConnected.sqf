@@ -2,6 +2,8 @@ params ["_unit"];
 
 private _playerIdx = ([SS220_var_playersArray, (getPlayerUID _unit)] call BIS_fnc_findInPairs);
 
+if (side _unit == sideLogic) exitWith {};
+
 if  (_playerIdx == -1) then {
     [SS220_var_playersArray, (getPlayerUID _unit), (str side _unit)] call BIS_fnc_addToPairs;
     diag_log format ["[SS_DEBUG] %1 connected, not in playersArray - added, new list is: %2", (getPlayerUID _unit), SS220_var_playersArray];
