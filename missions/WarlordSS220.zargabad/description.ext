@@ -375,9 +375,24 @@ class CfgWLRequisitionPresets
 					cost=200;
 					requirements[]={};
 				};
-				class rhsusf_weapon_crate
+				class rhsusf_gear_crate
+				{
+					cost=100;
+					requirements[]={};
+				};
+				class Box_NATO_AmmoOrd_F
 				{
 					cost=250;
+					requirements[]={};
+				};
+				class rhsusf_spec_weapons_crate
+				{
+					cost=500;
+					requirements[]={};
+				};
+				class rhsusf_weapon_crate
+				{
+					cost=450;
 					requirements[]={};
 				};
 				class rhsusf_launcher_crate
@@ -669,14 +684,24 @@ class CfgWLRequisitionPresets
 					cost=200;
 					requirements[]={};
 				};
+				class rhs_gear_crate
+				{
+					cost=50;
+					requirements[]={};
+				};
+				class rhs_spec_weapons_crate
+				{
+					cost=300;
+					requirements[]={};
+				};
 				class rhs_weapon_crate
 				{
-					cost=250;
+					cost=100;
 					requirements[]={};
 				};
 				class rhs_launcher_crate
 				{
-					cost=300;
+					cost=200;
 					requirements[]={};
 				};
 			};
