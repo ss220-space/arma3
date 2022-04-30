@@ -8,6 +8,9 @@ player disableAI "RADIOPROTOCOL";
 // Проверка баланса команд. Относительность BLUFOR/OPFOR 1:2 - Shield
 //if ( ( west countSide allPlayers < 1) or ( east countSide allPlayers < 1) ) exitWith {};
 
+//С клиента запрос на сервер для функции запрета входа в другую команду - Kotyara
+[player] remoteExec ["SS_fnc_Server_onConnected", 2];
+
 // Даем 500 очков каждому новому игроку - Shield
 if !(_didJIP) then 
 {
@@ -26,5 +29,12 @@ if ( ( west countSide allPlayers > (east countSide allPlayers)+2) or ( east coun
 };
 */
 
-//С клиента запрос на сервер для функции запрета входа в другую команду
-[player] remoteExec ["SS_fnc_Server_onConnected", 2];
+
+//Запуск модуля динамической музыки - Shield
+if (hasInterface) then
+{
+//Сон перед первым запуском. Чтобы прошло интро и некоторое время после
+sleep 700;
+execVM "Music\musicHandler.sqf";
+};
+
