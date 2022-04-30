@@ -6,4 +6,11 @@ class SS
 		
 		class findanddelete {};
 	};
+    
+    class serverSide
+    {
+        file = "scripts\serverSide";
+        
+        class Server_onConnected {};
+    };
 };

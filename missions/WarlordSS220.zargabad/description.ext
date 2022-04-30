@@ -825,3 +825,13 @@ class CfgWLFactionAssets
 		};
 	};
 };
+
+//Показывается игроку, зашедшему не за свою сторону
+class CfgDebriefing
+{
+	class teamSwitchNotAllowed
+	{
+		title = "Смена сторон запрещена";
+		description = "Зайдите за свою сторону";
+	};
+};
