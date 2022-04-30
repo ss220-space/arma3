@@ -12,7 +12,7 @@ if (isEngineOn _object) exitwith {_object vehicleChat "Service Cancelled"};
 _object vehicleChat "Идет ремонт...";
 sleep _time;
 if (isEngineOn _object) exitwith {_object vehicleChat "Service Cancelled"};
-_object setDammage 0;
+_object setDamage 0;
 _object vehicleChat "Идет перезарядка...";
 _magazines = getArray(configFile >> "CfgVehicles" >> _type >> "magazines");
 

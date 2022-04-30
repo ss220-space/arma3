@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=307;
+		nextID=361;
 	};
 	class Camera
 	{
-		pos[]={3788.7817,47.531464,2795.4832};
-		dir[]={0.88325047,-0.36232525,-0.29763907};
-		up[]={0.34335428,0.93205172,-0.11570404};
-		aside[]={-0.31933752,0,-0.94764102};
+		pos[]={3628.7539,219.33592,4491.3906};
+		dir[]={0.43406671,-0.0041742241,0.90088093};
+		up[]={0.0018179881,0.99998903,0.0037734176};
+		aside[]={0.9008882,3.0407682e-007,-0.43407002};
 	};
 };
 binarizationWanted=0;
@@ -372,7 +372,7 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveMode";
+			property="ReviveRequiredItems";
 			expression="false";
 			class Value
 			{
@@ -385,7 +385,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -595,6 +595,25 @@ class CustomAttributes
 		};
 		class Attribute2
 		{
+			property="ENH_dynamicGroups";
+			expression="        if (!is3DEN && isMultiplayer && _value) then        {          if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};          if (hasInterface) then          {            [] spawn            {              scriptName 'ENH_Attribute_DynamicGroups';              waitUntil {!isNull player};              ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;            };          };        };      ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute3
+		{
 			property="ReviveUnconsciousStateMode";
 			expression="false";
 			class Value
@@ -612,7 +631,26 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute3
+		class Attribute4
+		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute5
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -645,44 +683,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute4
-		{
-			property="ENH_dynamicGroups";
-			expression="        if (!is3DEN && isMultiplayer && _value) then        {          if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};          if (hasInterface) then          {            [] spawn            {              scriptName 'ENH_Attribute_DynamicGroups';              waitUntil {!isNull player};              ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;            };          };        };      ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=0;
-				};
-			};
-		};
-		class Attribute5
-		{
-			property="ReviveRequiredItems";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=2;
 				};
 			};
 		};
@@ -2697,7 +2697,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="""RHS_C130J_Cargo""";
+											value="RHS_C130J_Cargo";
 										};
 									};
 								};
@@ -2860,7 +2860,7 @@ class CustomAttributes
 										"SIDE"
 									};
 								};
-								value="CIV";
+								value="WEST";
 							};
 						};
 						class Item6
@@ -2874,7 +2874,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=500;
+								value=385;
 							};
 						};
 					};
@@ -30402,11 +30402,10 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3855.3694,11.341949,2712.5574};
-						angles[]={6.270689,6.075007,0.0099949092};
+						position[]={-1.2253418,430.26172,10446.513};
+						angles[]={0,6.075007,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						skill=0.2;
@@ -30414,7 +30413,7 @@ class Mission
 					};
 					id=1513;
 					type="Land_CampingTable_F";
-					atlOffset=-0.00031661987;
+					atlOffset=343.66995;
 				};
 				class Item29
 				{
