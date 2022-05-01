@@ -11,6 +11,12 @@ player disableAI "RADIOPROTOCOL";
 //С клиента запрос на сервер для функции запрета входа в другую команду - Kotyara
 [player] remoteExec ["SS_fnc_Server_onConnected", 2];
 
+["ace_killed", {
+    if (_this select 0 == player) then {
+        ["unconscious", false] call ace_common_fnc_setDisableUserInputStatus;
+    };
+}] call CBA_fnc_addEventHandler;
+
 // Даем 500 очков каждому новому игроку - Shield
 if !(_didJIP) then 
 {

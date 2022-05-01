@@ -10,7 +10,7 @@ params ["_dayTracks", "_nightTracks", "_rainTracks", "_fogTracks", "_fallTracks"
 //Transition values will delay the song changes in seconds
 
 //transition between out of combat tracks.
-_safeTransitionDuration = 640;
+_safeTransitionDuration = 480;
 //transition between in combat tracks
 _combatTransitionDuration = 5;
 
