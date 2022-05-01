@@ -876,7 +876,16 @@ class CfgWLFactionAssets
 };
 
 //Респауны - Arlord
-respawnTemplates[] = {"MenuInventory","MenuPosition"}; 
+respawn = 3;
+respawnButton = 1;
+respawnDelay = 30;
+respawnDialog = 1;
+respawnOnStart = 0;
+saving = 0;
+respawnTemplates[] = {"MenuInventory","MenuPosition"};
+respawnTemplatesVirtual[] = {};
+
+
 //Классы для Respawns- Shield
 class CfgRoles
 {
