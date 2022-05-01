@@ -12,11 +12,7 @@ briefingName = "SS220 Warlords (Zargabad)";
 5 = Direct
 6 = System
 */
-disableChannels[]={0,1,2,3,4,5};
-
-//Пресеты классов
-respawnTemplates[] = {"MenuInventory","MenuPosition"};
-#include "cfgRespawnInventory.hpp"
+disableChannels[]={0,2,5};
 
 //Послабление настроек безопасности - Shield 
 allowFunctionsLog = 1;
@@ -25,7 +21,6 @@ zeusCompositionScriptLevel = 2;
 
 //Применение настроек CBA - Shield 
 cba_settings_hasSettingsFile = 1;
-
 
 //Include hpp файлов переснаряжения магазинов - Shield
 #include "Configs\defines.hpp"
@@ -74,7 +69,7 @@ class CfgWLRequisitionPresets
 					cost=450;
 					requirements[]={};
 				};
-				class rhsusf_CGRCAT1A2_usmc_d
+				class rhsusf_m1240a1_usarmy_wd
 				{
 					cost=500;
 					requirements[]={};
@@ -96,7 +91,7 @@ class CfgWLRequisitionPresets
 				};
 				class rhsusf_m1025_w_m2
 				{
-					cost=1000;
+					cost=800;
 					requirements[]={};
 				};
 				class rhsusf_m966_w
@@ -121,12 +116,12 @@ class CfgWLRequisitionPresets
 				};
 				class rhsusf_m1240a1_mk19crows_usarmy_wd
 				{
-					cost=1600;
+					cost=2000;
 					requirements[]={};
 				};
 				class rhsusf_m113_usarmy_MK19
 				{
-					cost=1600;
+					cost=1800;
 					requirements[]={};
 				};
 				class rhsusf_M977A4_AMMO_usarmy_wd
@@ -136,7 +131,7 @@ class CfgWLRequisitionPresets
 				};
 				class rhsusf_stryker_m1126_m2_wd
 				{
-					cost=3000;
+					cost=2600;
 					requirements[]={};
 				};
 				class rhsusf_stryker_m1126_mk19_wd
@@ -146,7 +141,7 @@ class CfgWLRequisitionPresets
 				};
 				class rhsusf_stryker_m1132_m2_wd
 				{
-					cost=3500;
+					cost=2800;
 					requirements[]={};
 				};
 				class rhsusf_stryker_m1134_wd
@@ -156,7 +151,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_M6_wd
 				{
-					cost=4000;
+					cost=4500;
 					requirements[]={};
 				};
 				class RHS_M2A3_wd
@@ -202,7 +197,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_MELB_AH6M
 				{
-					cost=2500;
+					cost=3200;
 					requirements[]=
 					{
 						"H"
@@ -210,7 +205,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_UH60M2
 				{
-					cost=3000;
+					cost=2000;
 					requirements[]=
 					{
 						"H"
@@ -218,7 +213,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_UH1Y_UNARMED_d
 				{
-					cost=3000;
+					cost=2200;
 					requirements[]=
 					{
 						"H"
@@ -226,7 +221,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_UH60M
 				{
-					cost=3500;
+					cost=2800;
 					requirements[]=
 					{
 						"H"
@@ -379,12 +374,47 @@ class CfgWLRequisitionPresets
 					cost=200;
 					requirements[]={};
 				};
-				class rhsusf_weapon_crate
+				class rhsusf_gear_crate
+				{
+					cost=100;
+					requirements[]={};
+				};
+				class Box_NATO_AmmoOrd_F
 				{
 					cost=250;
 					requirements[]={};
 				};
+				class rhsusf_spec_weapons_crate
+				{
+					cost=500;
+					requirements[]={};
+				};
+				class rhsusf_weapon_crate
+				{
+					cost=450;
+					requirements[]={};
+				};
 				class rhsusf_launcher_crate
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_Misc
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Combo
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Illum
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Smoke
 				{
 					cost=300;
 					requirements[]={};
@@ -412,6 +442,12 @@ class CfgWLRequisitionPresets
 				class RHS_TOW_TriPod_WD
 				{
 					cost=500;
+					requirements[]={};
+					offset[]={0,2.3000002,0};
+				};
+				class RHS_M252_D
+				{
+					cost=1200;
 					requirements[]={};
 					offset[]={0,2.3000002,0};
 				};
@@ -443,21 +479,6 @@ class CfgWLRequisitionPresets
 					cost=350;
 					requirements[]={};
 				};
-				class rhsgref_ins_uaz_dshkm
-				{
-					cost=750;
-					requirements[]={};
-				};
-				class rhsgref_ins_uaz_ags
-				{
-					cost=950;
-					requirements[]={};
-				};
-				class rhsgref_ins_uaz_spg9
-				{
-					cost=1400;
-					requirements[]={};
-				};
 				class rhs_tigr_vdv
 				{
 					cost=450;
@@ -470,7 +491,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_Ural_VDV_01
 				{
-					cost=650;
+					cost=500;
 					requirements[]={};
 				};
 				class RHS_Ural_Fuel_VDV_01
@@ -478,24 +499,33 @@ class CfgWLRequisitionPresets
 					cost=750;
 					requirements[]={};
 				};
-				class rhs_tigr_sts_vdv
+				class rhsgref_ins_g_uaz_dshkm_chdkz
 				{
-					cost=1000;
+					cost=800;
 					requirements[]={};
 				};
-				class rhsgref_BRDM2_vdv
+				class rhsgref_ins_g_uaz_ags
 				{
-					cost=1400;
+					cost=950;
+					requirements[]={};
+				};
+				class rhsgref_ins_g_uaz_spg9
+				{
+					cost=1100;
+					requirements[]={};
+				};
+				class rhs_tigr_sts_vdv
+				{
 					requirements[]={};
 				};
 				class RHS_Ural_Repair_VDV_01
 				{
-					cost=1500;
+					cost=1200;
 					requirements[]={};
 				};
 				class rhsgref_BRDM2_ATGM_vdv
 				{
-					cost=1600;
+					cost=1200;
 					requirements[]={};
 				};
 				class rhs_gaz66_ammo_vdv
@@ -505,67 +535,57 @@ class CfgWLRequisitionPresets
 				};
 				class rhs_btr60_vdv
 				{
-					cost=3000;
+					cost=1200;
 					requirements[]={};
 				};
 				class rhs_btr70_vdv
 				{
-					cost=3150;
+					cost=1400;
 					requirements[]={};
 				};
 				class rhs_btr80_vdv
 				{
-					cost=3250;
+					cost=2000;
 					requirements[]={};
 				};
 				class rhs_btr80a_vdv
 				{
-					cost=3500;
+					cost=3000;
 					requirements[]={};
 				};
 				class rhs_zsu234_aa
 				{
-					cost=4000;
-					requirements[]={};
-				};
-				class rhs_t15_tv
-				{
-					cost=4500;
+					cost=2800;
 					requirements[]={};
 				};
 				class rhs_bmd1
 				{
-					cost=4500;
+					cost=3300;
 					requirements[]={};
 				};
 				class rhs_bmd1r
 				{
-					cost=4500;
+					cost=3500;
 					requirements[]={};
 				};
 				class rhs_bmd2m
 				{
-					cost=4500;
+					cost=3500;
 					requirements[]={};
 				};
 				class rhs_brm1k_vdv
 				{
-					cost=4500;
-					requirements[]={};
-				};
-				class rhs_bmp3_late_msv
-				{
-					cost=4700;
+					cost=3800;
 					requirements[]={};
 				};
 				class rhs_bmd4m_vdv
 				{
-					cost=5000;
+					cost=4000;
 					requirements[]={};
 				};
 				class rhs_bmp2k_vdv
 				{
-					cost=5000;
+					cost=4000;
 					requirements[]={};
 				};
 				class rhs_t72be_tv
@@ -585,7 +605,17 @@ class CfgWLRequisitionPresets
 				};
 				class rhs_sprut_vdv
 				{
-					cost=7000;
+					cost=5000;
+					requirements[]={};
+				};
+				class rhs_t15_tv
+				{
+					cost=5000;
+					requirements[]={};
+				};
+				class rhs_t14_tv
+				{
+					cost=6000;
 					requirements[]={};
 				};
 			};
@@ -601,7 +631,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_Mi8mt_vdv
 				{
-					cost=4500;
+					cost=2200;
 					requirements[]=
 					{
 						"H"
@@ -609,7 +639,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_Mi8MTV3_vdv
 				{
-					cost=5000;
+					cost=4000;
 					requirements[]=
 					{
 						"H"
@@ -617,7 +647,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_Mi8mt_Cargo_vdv
 				{
-					cost=5000;
+					cost=3000;
 					requirements[]=
 					{
 						"H"
@@ -625,7 +655,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_Mi8MTV3_heavy_vdv
 				{
-					cost=5500;
+					cost=4500;
 					requirements[]=
 					{
 						"H"
@@ -698,12 +728,41 @@ class CfgWLRequisitionPresets
 					cost=200;
 					requirements[]={};
 				};
+				class rhs_gear_crate
+				{
+					cost=50;
+					requirements[]={};
+				};
+				class rhs_spec_weapons_crate
+				{
+					cost=300;
+					requirements[]={};
+				};
 				class rhs_weapon_crate
 				{
-					cost=250;
+					cost=100;
 					requirements[]={};
 				};
 				class rhs_launcher_crate
+				{
+					cost=200;
+					requirements[]={};
+				class ACE_Box_Misc
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Combo
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Illum
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Smoke
 				{
 					cost=300;
 					requirements[]={};
@@ -762,6 +821,11 @@ class CfgWLRequisitionPresets
 				class rhs_Metis_9k115_2_msv
 				{
 					cost=500;
+					requirements[]={};
+					offset[]={0,2.3000002,0};
+				class rhs_2b14_82mm_msv
+				{
+					cost=1100;
 					requirements[]={};
 					offset[]={0,2.3000002,0};
 				};
@@ -826,31 +890,571 @@ class CfgWLFactionAssets
 		};
 	};
 	class INDEP
+	// rhsgref_faction_nationalist 
 	{
 		class InfantryGroups
 		{
 			groups[] = {
-                "'Indep' >> 'rhsgref_faction_cdf_ground' >> 'rhsgref_group_cdf_reg_infantry' >> 'rhsgref_group_cdf_reg_infantry_squad'",
-                "'Indep' >> 'rhsgref_faction_cdf_ground' >> 'rhsgref_group_cdf_reg_infantry' >> 'rhsgref_group_cdf_reg_infantry_squad_weap'"
+                "'Indep' >> 'rhsgref_faction_nationalist' >> 'rhsgref_group_national_infantry' >> 'rhsgref_group_national_infantry_squad'",
+                "'Indep' >> 'rhsgref_faction_nationalist' >> 'rhsgref_group_national_infantry' >> 'rhsgref_group_national_infantry_squad_2'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhsgref_group_national_infantry' >> 'rhsgref_group_national_infantry_mg'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhsgref_group_national_infantry' >> 'rhsgref_group_national_infantry_at'"
 			};
 		};
 		class MotorizedGroups
 		{
 			groups[] = {
-
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_chq'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad_2mg'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad_sniper'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad_mg_sniper'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad_aa'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_nat_uaz' >> 'BUS_MotInf_Team_GMG'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_nat_uaz' >> 'BUS_MotInf_Team_HMG'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_nat_uaz' >> 'BUS_MotInf_AT'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_nat_uaz' >> 'BUS_MotInf_AA'"
 			};
 		};
 		class MechanizedGroups
 		{
 			groups[] = {
-
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_chq'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad_2mg'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad_sniper'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad_mg_sniper'",
+				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad_aa'"
 			};
 		};
 		class ArmoredGroups
 		{
 			groups[] = {
-				
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72baPlatoon'",
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72baPlatoon_AA'",
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72baSection'",
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72BBPlatoon'",
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72BBPlatoon_AA'",
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72BBSection'",
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_t72bcPlatoon'",
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_t72bcPlatoon_AA'",
+				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_t72bcSection'"
 			};
 		};
+	};
+};
+
+//Респауны - Arlord
+respawnTemplates[] = {"MenuInventory","MenuPosition"}; 
+//Классы для Respawns- Shield
+class CfgRoles
+{
+	class Assault
+	{
+		displayName = $STR_A3_Role_Assault;
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class Support
+	{
+		displayName = $STR_A3_Role_Support;
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\support_ca.paa";
+	};
+	class Recon
+	{
+		displayName = $STR_A3_Role_Recon;
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\recon_ca.paa";
+	};
+};
+#include "cfgRespawnInventory.hpp"
+
+// Класс музыки. Пример классов для динамической музыки: - Shield 
+//class Track_Name
+//{
+////name = "Track Name (Best left in Comment mode)";
+//sound[] = {"bf_Adapt\music\track_name.ogg",1.0,1.0};
+//duration=length of audio in seconds;
+//parameters[]    = {"parameter"}; 
+//};
+//
+//here are the list of parameters that can be used to create arrays
+
+//-- for infantry --
+//during daylight "daytime"
+//during night "nighttime"
+//during rain "rain"
+//during fog "fog"
+//during skydiving "skydive"
+//during scuba diving "scubadive"
+
+
+//-- for vehicles --
+//for cars "car"
+//for tanks "tank"
+//for boats "boat"
+//for submarines "submarine"
+//for helicopters "helicopter"
+//for planes "plane"
+
+//-- for combat -- might do more
+//for infantry combat "infantrycombat"
+//for fog infantry combat "infantryfogcombat"
+//for get away or vehicle combat "vehiclecombat
+
+// Импорт оригинальных композиций A3 и A1/A2/A2OA
+import CUP_A1_Arma_Magna from CfgMusic;
+import CUP_A1_Arma_Vera from CfgMusic; 
+import CUP_A1_Black_Ops from CfgMusic;
+import CUP_A1_Field_Track from CfgMusic; 
+import CUP_A1_First_Assault from CfgMusic;
+import CUP_A1_Flashpoint_Rearmed from CfgMusic;
+import CUP_A1_Paradise_On_Earth from CfgMusic;
+import CUP_A1_Primo_In_Mortis from CfgMusic;
+import CUP_A1_Second_Assault from CfgMusic;
+import CUP_A1_Street_Combat from CfgMusic;
+import CUP_A1_Team_Bravo from CfgMusic;
+import CUP_A1_Team_Alpha from CfgMusic;
+import CUP_A2EWEW_ToWar from CfgMusic;
+import CUP_A2EWEW_DEFCON from CfgMusic;
+import CUP_A2EWEW_Fallout from CfgMusic;
+import CUP_A2EWEW_MAD from CfgMusic;
+import CUP_A2EWEW_Sky_Net from CfgMusic;
+import CUP_A2EWEW_Wasteland from CfgMusic;
+import CUP_A2OA_Airborne from CfgMusic;
+import CUP_A2OA_Airborne_D from CfgMusic;
+import CUP_A2OA_Arrival from CfgMusic;
+import CUP_A2OA_Arrowhead from CfgMusic;
+import CUP_A2OA_Arrowhead_D from CfgMusic;
+import CUP_A2OA_Coltan_Blues from CfgMusic;
+import CUP_A2OA_Coltan_Blues_D from CfgMusic;
+import CUP_A2OA_Concrete_Cell from CfgMusic;
+import CUP_A2OA_Crude_Oil from CfgMusic;
+import CUP_A2OA_Dancing_Scimitar from CfgMusic;
+import CUP_A2OA_Death_From_Above from CfgMusic;
+import CUP_A2OA_Good_Morning_TStan from CfgMusic;
+import CUP_A2OA_Iron_Mountain from CfgMusic;
+import CUP_A2OA_Iron_Mountain_V from CfgMusic;
+import CUP_A2OA_Iron_Mountain_D1 from CfgMusic;
+import CUP_A2OA_Iron_Mountain_D2 from CfgMusic;
+import CUP_A2OA_Night_Visions from CfgMusic;
+import CUP_A2OA_Nightlife from CfgMusic;
+import CUP_A2OA_Revolver_Jam from CfgMusic;
+import CUP_A2OA_Warmongers from CfgMusic;
+import CUP_A2OA_Zargabad_Market from CfgMusic;
+class CfgMusic
+{
+	class Empty
+	{
+		name = "Empty Sound";
+		sound[] = {"music\ogg\empty.ogg",1.0,1.0};
+		duration=1;
+	};
+	class Dynamic_CUP_A1_Arma_Magna: CUP_A1_Arma_Magna
+	{	
+		parameters[] = {"daytime", "nighttime", "rain", "fog", "scubadive", "submarine"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Arma_Magna.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Arma_Vera: CUP_A1_Arma_Vera
+	{	
+		parameters[] = {"boat", "tank", "helicopter", "plane", "skydive", "car"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Arma_Vera.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Black_Ops: CUP_A1_Black_Ops
+	{	
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Black_Ops.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Field_Track: CUP_A1_Field_Track
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Field_Track.ogg",
+			1,
+			1
+		};
+
+	};
+	class Dynamic_CUP_A1_First_Assault: CUP_A1_First_Assault
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\First_Assault.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Flashpoint_Rearmed: CUP_A1_Flashpoint_Rearmed
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Flashpoint_Rearmed.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Paradise_On_Earth: CUP_A1_Paradise_On_Earth
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Paradise_On_Earth.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Primo_In_Mortis: CUP_A1_Primo_In_Mortis
+	{	
+		parameters[] = {"daytime", "nighttime", "rain", "fog", "scubadive", "submarine"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Primo_In_Mortis.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Second_Assault: CUP_A1_Second_Assault
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Second_Assault.ogg",
+			1,
+			1
+		};
+		
+	};
+	class Dynamic_CUP_A1_Street_Combat: CUP_A1_Street_Combat
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Street_Combat.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Team_Bravo: CUP_A1_Team_Bravo
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Team_Bravo.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1_Team_Alpha: CUP_A1_Team_Alpha
+	{
+		parameters[] = {"vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\Team_Alpha.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2EWEW_ToWar: CUP_A2EWEW_ToWar
+	{
+		parameters[] = {"vehiclecombat", "plane", "helicopter"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\ToWar.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2EWEW_DEFCON: CUP_A2EWEW_DEFCON
+	{
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\DEFCON.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2EWEW_Fallout: CUP_A2EWEW_Fallout
+	{
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Fallout.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2EWEW_MAD: CUP_A2EWEW_MAD
+	{
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\MAD.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2EWEW_Sky_Net: CUP_A2EWEW_Sky_Net
+	{
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Sky_Net.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2EWEW_Wasteland: CUP_A2EWEW_Wasteland
+	{
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Wasteland.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Airborne: CUP_A2OA_Airborne
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Airborne.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Airborne_D: CUP_A2OA_Airborne_D
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Airborne_D.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Arrival: CUP_A2OA_Arrival
+	{
+		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Arrival.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Arrowhead: CUP_A2OA_Arrowhead
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Arrowhead.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Arrowhead_D: CUP_A2OA_Arrowhead_D
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Arrowhead_D.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Coltan_Blues: CUP_A2OA_Coltan_Blues
+	{
+		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Coltan_Blues.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Coltan_Blues_D: CUP_A2OA_Coltan_Blues_D
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Coltan_Blues_D.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Concrete_Cell: CUP_A2OA_Concrete_Cell
+	{
+		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Concrete_Cell.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Crude_Oil: CUP_A2OA_Crude_Oil
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Crude_Oil.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Dancing_Scimitar: CUP_A2OA_Dancing_Scimitar
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Dancing_Scimitar.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Death_From_Above: CUP_A2OA_Death_From_Above
+	{
+		parameters[] = {"vehiclecombat", "plane", "helicopter"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Death_From_Above.ogg",
+			1,
+			1
+		};
+	};
+	class Helikopter
+	{
+		name = "Helikopter";
+		sound[] = {"music\ogg\helikopter.ogg",1.0,1.0};
+		duration=98;
+		parameters[] = {"helicopter"}; 
+	};
+	class Dynamic_CUP_A2OA_Good_Morning_TStan: CUP_A2OA_Good_Morning_TStan
+	{
+		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Good_Morning_TStan.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Iron_Mountain: CUP_A2OA_Iron_Mountain
+	{
+		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Iron_Mountain.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Iron_Mountain_V: CUP_A2OA_Iron_Mountain_V
+	{
+		parameters[] = {"nighttime", "rain", "fog"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Iron_Mountain_V.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Iron_Mountain_D1: CUP_A2OA_Iron_Mountain_D1
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Iron_Mountain_D1.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Iron_Mountain_D2: CUP_A2OA_Iron_Mountain_D2
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Iron_Mountain_D2.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Night_Visions: CUP_A2OA_Night_Visions
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Night_Visions.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Nightlife: CUP_A2OA_Nightlife
+	{
+		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Nightlife.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Revolver_Jam: CUP_A2OA_Revolver_Jam
+	{
+		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Revolver_Jam.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Warmongers: CUP_A2OA_Warmongers
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Warmongers.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2OA_Zargabad_Market: CUP_A2OA_Zargabad_Market
+	{
+		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\oa\Zargabad_Market.ogg",
+			1,
+			1
+		};
+	};
+};
+
+//Показывается игроку, зашедшему не за свою сторону
+class CfgDebriefing
+{
+	class teamSwitchNotAllowed
+	{
+		title = "Смена сторон запрещена";
+		description = "Зайдите за свою сторону";
 	};
 };
