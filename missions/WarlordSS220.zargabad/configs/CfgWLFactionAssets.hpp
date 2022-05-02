@@ -41,55 +41,66 @@ class CfgWLFactionAssets
 		};
 	};
 	class INDEP
-	// rhsgref_faction_nationalist 
+	// UK3CB_TKM_I 
 	{
 		class InfantryGroups
 		{
 			groups[] = {
-                "'Indep' >> 'rhsgref_faction_nationalist' >> 'rhsgref_group_national_infantry' >> 'rhsgref_group_national_infantry_squad'",
-                "'Indep' >> 'rhsgref_faction_nationalist' >> 'rhsgref_group_national_infantry' >> 'rhsgref_group_national_infantry_squad_2'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhsgref_group_national_infantry' >> 'rhsgref_group_national_infantry_mg'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhsgref_group_national_infantry' >> 'rhsgref_group_national_infantry_at'"
+                "'Indep' >> 'UK3CB_TKM_I' >> 'Infantry' >> 'UK3CB_TKM_I_MG_Sentry'",
+                "'Indep' >> 'UK3CB_TKM_I' >> 'Infantry' >> 'UK3CB_TKM_I_IED_Sentry'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Infantry' >> 'UK3CB_TKM_I_AT_Sentry'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Infantry' >> 'UK3CB_TKM_I_UGL_Sentry'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Infantry' >> 'UK3CB_TKM_I_AA_FireTeam'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Infantry' >> 'UK3CB_TKM_I_MK_FireTeam'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'SpecOps' >> 'UK3CB_TKM_I_Sniper_Team'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'SpecOps' >> 'UK3CB_TKM_I_IED_Team'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Infantry' >> 'UK3CB_TKM_I_AR_Sentry'"
 			};
 		};
 		class MotorizedGroups
 		{
 			groups[] = {
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_chq'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad_2mg'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad_sniper'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad_mg_sniper'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_ural' >> 'rhs_group_nat_ural_squad_aa'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_nat_uaz' >> 'BUS_MotInf_Team_GMG'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_nat_uaz' >> 'BUS_MotInf_Team_HMG'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_nat_uaz' >> 'BUS_MotInf_AT'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_nat_uaz' >> 'BUS_MotInf_AA'"
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_BRDM2_Sentry'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_BTR40_MG_Sentry'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Datsun_PKM_Sentry'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Motorised_UAZ_AA_FireTeam'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Motorised_LandRover_AT_FireTeam'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Motorised_Datsun_MG_FireTeam'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Motorised_Hilux_RIF_FireTeam'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Motorised_BTR40_RIF_FireTeam'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_V3S_Open_Motorised_AA_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_V3S_Closed_Motorised_AT_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_V3S_Open_Motorised_MG_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_V3S_Closed_Motorised_RIF_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Ural_Closed_Motorised_RIF_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_BTR60_Motorised_RIF_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_UAZ_MotInf_NSV_Team'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_LR_MotInf_DSHKM_HIGH_Team'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_LR_MotInf_DSHKM_LOW_Team'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Datsun_MotInf_KORD_Team'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Hilux_MotInf_AGS30_Team'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Motorized' >> 'UK3CB_TKM_I_Hilux_MotInf_SPG9_Team'"
 			};
 		};
 		class MechanizedGroups
 		{
 			groups[] = {
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_chq'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad_2mg'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad_sniper'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad_mg_sniper'",
-				"'Indep' >> 'rhsgref_faction_nationalist' >> 'rhs_group_indp_nat_btr70' >> 'rhs_group_nat_btr70_squad_aa'"
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Mechanized' >> 'UK3CB_TKM_I_BMP1_Mechanized_AA_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Mechanized' >> 'UK3CB_TKM_I_BMP1_Mechanized_AT_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Mechanized' >> 'UK3CB_TKM_I_BMP1_Mechanized_MG_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Mechanized' >> 'UK3CB_TKM_I_BMP1_Mechanized_RIF_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Mechanized' >> 'UK3CB_TKM_I_MTLB_PKT_Mechanized_AA_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Mechanized' >> 'UK3CB_TKM_I_MTLB_PKT_Mechanized_MG_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Mechanized' >> 'UK3CB_TKM_I_MTLB_PKT_Mechanized_RIF_Squad'",
+				"'Indep' >> 'UK3CB_TKM_I' >> 'Mechanized' >> 'UK3CB_TKM_I_MTLB_PKT_Mechanized_AT_Squad'"
 			};
 		};
 		class ArmoredGroups
 		{
 			groups[] = {
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72baPlatoon'",
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72baPlatoon_AA'",
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72baSection'",
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72BBPlatoon'",
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72BBPlatoon_AA'",
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_T72BBSection'",
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_t72bcPlatoon'",
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_t72bcPlatoon_AA'",
-				"'Indep' >> 'rhsgref_faction_chdkz' >> 'rhs_group_indp_ins_72' >> 'RHS_t72bcSection'"
+				"'Indep' >> 'UK3CB_TKA_I' >> 'Armored' >> 'UK3CB_TKA_I_TankPlatoon'",
+				"'Indep' >> 'UK3CB_TKA_I' >> 'Armored' >> 'UK3CB_TKA_I_TankPlatoon_AA'",
+				"'Indep' >> 'UK3CB_TKA_I' >> 'Armored' >> 'UK3CB_TKA_I_TankSection'"
 			};
 		};
 	};
