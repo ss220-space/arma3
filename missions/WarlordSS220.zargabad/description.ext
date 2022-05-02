@@ -74,7 +74,13 @@ respawnTemplatesVirtual[] = {};
 #include "Configs\CfgFunctions.hpp"
 
 //Конфигурация функций CBA 
-#include "Configs\CBA.hpp"
+class Extended_PreInit_EventHandlers
+{
+	class outlw_magRepack
+	{
+		Init = "outlw_magRepack_Var = execVM 'XEH_preInit.sqf'";
+	};
+};
 
 //Конфиг музыки
 #include "Configs\CfgMusic.hpp"
