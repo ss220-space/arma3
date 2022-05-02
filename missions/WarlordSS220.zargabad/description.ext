@@ -27,6 +27,14 @@ class Header
 disableChannels[]={0,2,5};
 
 //Применение настроек CBA - Shield 
+//Конфигурация функций CBA 
+class Extended_PreInit_EventHandlers
+{
+	class outlw_magRepack
+	{
+		Init = "outlw_magRepack_Var = execVM 'XEH_preInit.sqf'";
+	};
+};
 cba_settings_hasSettingsFile = 0;
 
 //Применение модуля уборки
@@ -72,15 +80,6 @@ respawnTemplatesVirtual[] = {};
 
 //Конфигурация кастомных функций 
 #include "Configs\CfgFunctions.hpp"
-
-//Конфигурация функций CBA 
-class Extended_PreInit_EventHandlers
-{
-	class outlw_magRepack
-	{
-		Init = "outlw_magRepack_Var = execVM 'XEH_preInit.sqf'";
-	};
-};
 
 //Конфиг музыки
 #include "Configs\CfgMusic.hpp"
