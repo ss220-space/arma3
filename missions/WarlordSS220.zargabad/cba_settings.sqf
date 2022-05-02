@@ -400,29 +400,6 @@ force cba_disposable_dropUsedLauncher = 2;
 force cba_disposable_replaceDisposableLauncher = true;
 force cba_network_loadoutValidation = 1;
 
-// Enhanced Movement Rework
-force emr_main_allowMidairClimbing = false;
-force emr_main_animSpeedCoef = 1;
-force emr_main_animSpeedStaminaCoef = 0.4;
-force emr_main_blacklistStr = "";
-force emr_main_climbingEnabled = true;
-force emr_main_climbOnDuty = 3.4;
-force emr_main_climbOverDuty = 3;
-force emr_main_dropDuty = 0.7;
-force emr_main_enableWeightCheck = true;
-force emr_main_jumpDuty = 1;
-force emr_main_jumpingEnabled = true;
-force emr_main_jumpingLoadCoefficient = 1;
-force emr_main_jumpVelocity = 3.4;
-force emr_main_maxClimbHeight = 2.6;
-force emr_main_maxDropHeight = 6;
-force emr_main_maxWeightClimb1 = 100;
-force emr_main_maxWeightClimb2 = 85;
-force emr_main_maxWeightClimb3 = 60;
-force emr_main_maxWeightJump = 100;
-force emr_main_staminaCoefficient = 1;
-force emr_main_whitelistStr = "";
-
 // Mag Repack
 force outlw_MR_beltTime = 3.505;
 force outlw_MR_bulletTime = 0.61;
