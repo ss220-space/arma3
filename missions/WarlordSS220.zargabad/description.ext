@@ -32,7 +32,7 @@ class Extended_PreInit_EventHandlers
 {
 	class outlw_magRepack
 	{
-		Init = "outlw_magRepack_Var = execVM 'XEH_preInit.sqf'";
+		Init = "outlw_magRepack_Var = call compile preprocessFileLineNumbers 'XEH_preInit.sqf'";
 	};
 };
 cba_settings_hasSettingsFile = 0;
