@@ -1,6 +1,18 @@
-//Название миссии продублировано здесь т.к. иногда не подгружает с mission.sqm - Shield
-onLoadName = "SS220 Warlords (Zargabad)";
+author			= "Shield, ArlordsGS, IT_Kotyara and RedokPaw";
+onLoadName		= "SS220 Warlords (Zargabad)";
 briefingName = "SS220 Warlords (Zargabad)";
+onLoadMission	= "Уничтожайте противника и захватите его базу для победы.";
+onLoadIntro = "Уничтожайте противника и захватите его базу для победы."
+loadScreen		= "images\logo.paa";
+overviewPicture	= "images\logo.paa";
+overviewText = "Уничтожайте противника и захватите его базу на карте Заргабад, Такистан";
+
+class Header
+{
+	gameType =  Warlords;
+	minPlayers =  2;
+	maxPlayers = 104;
+};
 
 //Настройки Чата - Shield
 /*
@@ -14,13 +26,30 @@ briefingName = "SS220 Warlords (Zargabad)";
 */
 disableChannels[]={0,2,5};
 
-//Послабление настроек безопасности - Shield 
-allowFunctionsLog = 1;
-allowFunctionsRecompile = 1;
-zeusCompositionScriptLevel = 2;
-
 //Применение настроек CBA - Shield 
 cba_settings_hasSettingsFile = 1;
+
+//Применение модуля уборки
+corpseManagerMode = 3;
+corpseLimit = 35; 
+corpseRemovalMinTime = 420;
+corpseRemovalMaxTime = 6400;
+wreckManagerMode = 1;
+wreckLimit = 20;
+wreckRemovalMinTime = 420;
+wreckRemovalMaxTime = 6400;
+minPlayerDistance = 50;
+
+//Настройки администрирования
+enableDebugConsole = 1;
+joinUnassigned = 1;
+skipLobby = 0;
+
+//Послабление настроек безопасности - Shield 
+allowFunctionsLog = 1;
+allowFunctionsRecompile = 0;
+zeusCompositionScriptLevel = 1;
+#include "Configs\CfgRemoteExec.hpp"
 
 //Респауны - Arlord
 respawn = 3;
