@@ -5,4 +5,4 @@ class CfgDebriefing
 		title = "Смена сторон запрещена";
 		description = "Зайдите за свою сторону";
 	};
-}:
+};
