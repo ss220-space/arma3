@@ -48,6 +48,8 @@ class cfgRemoteExec
 		class BIS_fnc_effectKilledSecondaries {};
 		class BIS_fnc_objectVar {};
 		class BIS_fnc_setCustomSoundController {};
+		class BIS_fnc_execVM {};
+		class BIS_fnc_debugConsoleExec {};
 	};
 	class Commands
 	{
