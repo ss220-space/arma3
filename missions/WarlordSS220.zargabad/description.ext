@@ -57,7 +57,9 @@ skipLobby = 0;
 allowFunctionsLog = 1;
 allowFunctionsRecompile = 0;
 zeusCompositionScriptLevel = 1;
-#include "Configs\CfgRemoteExec.hpp"
+
+//Временно отключен из-за проблем с совместимостью CBA_A3
+//#include "Configs\CfgRemoteExec.hpp"
 
 //Респауны - Arlord
 respawn = 3;
