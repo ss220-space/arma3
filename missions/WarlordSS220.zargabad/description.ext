@@ -27,7 +27,7 @@ class Header
 disableChannels[]={0,2,5};
 
 //Применение настроек CBA - Shield 
-cba_settings_hasSettingsFile = 1;
+cba_settings_hasSettingsFile = 0;
 
 //Применение модуля уборки
 corpseManagerMode = 3;
