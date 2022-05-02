@@ -74,7 +74,6 @@ class cfgRemoteExec
 		class vehicleChat;
 		class commandChat;
 		class addeventhandler;
-		class globalchat;
 		class unassignvehicle;
 		class action;
 		class ordergetin;
