@@ -53,7 +53,6 @@ addons[]=
 	"CUP_CABuildings2_Misc_Cargo",
 	"rhs_c_weapons",
 	"ace_compat_rhs_afrf3",
-	"jsrs_soundmod_rhs_afrf_weapons",
 	"A3_Weapons_F",
 	"ace_optics",
 	"A3_Weapons_F_Items",
@@ -105,7 +104,7 @@ addons[]=
 	"UK3CB_Factions_TKA_I",
 	"rhsusf_c_weapons",
 	"ace_attach",
-	"ace_chemlights",
+	"ace_chemligh",
 	"ace_compat_rhs_usf3",
 	"A3_Supplies_F_Heli_Bladders",
 	"A3_Props_F_Orange_Humanitarian_Camps",
@@ -121,7 +120,7 @@ addons[]=
 	"A3_Structures_F_Items_Luggage",
 	"A3_Structures_F_Items_Food",
 	"A3_Structures_F_Items_Stationery",
-	"A3_Structures_F_Items_Documents",
+	"A3_Structures_F_Items_Documen",
 	"A3_Structures_F_Heli_Items_Electronics",
 	"A3_Props_F_Orange_Items_Electronics",
 	"ace_respawn",
@@ -475,8 +474,8 @@ class AddonsMetaData
 		};
 		class Item52
 		{
-			className="ace_chemlights";
-			name="ace_chemlights";
+			className="ace_chemligh";
+			name="ace_chemligh";
 			author="Команда ACE";
 			url="http://ace3mod.com/";
 		};
@@ -490,7 +489,7 @@ class AddonsMetaData
 		class Item54
 		{
 			className="A3_Props_F_Orange";
-			name="Arma 3 Orange - Decorative and Mission Objects";
+			name="Arma 3 Orange - Decorative and Mission Objec";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -883,7 +882,7 @@ class CustomAttributes
 		class Attribute0
 		{
 			property="ENH_SPR";
-			expression="if (!is3DEN && _value # 0 > 0 && !isMultiplayer) then      {        ENH_SPR_Ruleset = _value param [0, 0];        ENH_SPR_Delay = _value param [1, 20];        ENH_SPR_CanDie = _value param [2, false];        ENH_SPR_RestoreLoadout = _value param [3, false];        ENH_SPR_OnRespawnCode = compile (_value param [4, '']);        ENH_SPR_Positions =        [          allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x}        ];        {          _x setVariable ['ENH_SPR_OriginalSide', side group _x];          _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];          _x addEventHandler ['handleDamage',          {            params ['_unit', '', '_damage', '', '', '_index'];            if (!alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};            if (_unit getVariable ['ENH_SPR_Tickets', 0] == 0) then            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              _damage;            };            if (ENH_SPR_CanDie && _index in [1, 2] && _damage >= 1) exitWith            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              1;            };            if (_index < 8 && (_damage min 0.95) == 0.95) then            {              setAccTime 1;              _unit allowDamage false;              _unit setCaptive true;              _unit setUnconscious true;              _unit setVariable ['ENH_SPR_Tickets', (_unit getVariable ['ENH_SPR_Tickets', 0]) - 1];              if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};              moveOut _unit;              _unit spawn ENH_fnc_SPR_respawnTimer;            };            _damage min 0.95;          }];        } forEach (allUnits select {_x getVariable ['ENH_SPR_Tickets', 0] > 0});                ENH_fnc_SPR_respawn =        {          scriptName 'ENH_Attribute_SPR_Respawn';          params ['_unit'];          if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};          if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};          private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;          private _positions = ENH_SPR_Positions select _sideID;          if (_positions isNotEqualTo []) then          {            switch (ENH_SPR_Ruleset) do            {              case 3:              {                _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);              };              case 2:              {                _unit setPos selectRandom _positions;              };            };          };          _unit setUnconscious false;          _unit allowDamage true;          _unit setDamage 0;          _unit switchMove '';          _unit call ENH_SPR_OnRespawnCode;          _unit spawn          {            sleep 8;            _this setCaptive false;          };        };                ENH_fnc_SPR_respawnTimer =        {          scriptName 'ENH_Attribute_SPR_RespawnTimer';          params ['_unit'];          private _respawnTime = time + ENH_SPR_Delay;          if (isPlayer _unit) then          {            private _ctrlRespawnTimer = (call BIS_fnc_displayMission) ctrlCreate ['RscStructuredText',-1];            _ctrlRespawnTimer ctrlSetPosition [0.25, 0, 0.5, 0.06];            _ctrlRespawnTimer ctrlSetBackgroundColor [0, 0, 0, 0.1];            _ctrlRespawnTimer ctrlCommit 0;            ENH_SPR_OriginalVolume = [soundVolume, musicVolume, radioVolume, speechVolume, environmentVolume];            0 cutText ['', 'BLACK OUT', 0.3];            0.3 fadeSound 0;            0.3 fadeMusic 0;            0.3 fadeRadio 0;            0.3 fadeSpeech 0;            0.3 fadeEnvironment 0;            showChat false;            while {time < _respawnTime} do            {              _ctrlRespawnTimer ctrlSetStructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>%1</t>', [(_respawnTime - time), 'HH:MM'] call BIS_fnc_timeToString];              sleep 0.1;            };            ctrlDelete _ctrlRespawnTimer;            0 cutText ['', 'BLACK IN', 8];            8 fadeSound (ENH_SPR_OriginalVolume # 0);            8 fadeMusic (ENH_SPR_OriginalVolume # 1);            8 fadeRadio (ENH_SPR_OriginalVolume # 2);            8 fadeSpeech (ENH_SPR_OriginalVolume # 3);            8 fadeEnvironment (ENH_SPR_OriginalVolume # 4);            showChat true;            [              ['Respawned'],              [format ['GRID: %1', mapGridPosition _unit]],              [format ['Tickets left: %1', _unit getVariable 'ENH_SPR_Tickets']]            ] spawn BIS_fnc_EXP_camp_SITREP;          }          else          {            if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then            {              [                str _unit, 'onEachFrame',                {                  drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_this # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_this # 1) - time), 2];                },                [_unit, _respawnTime]              ] call BIS_fnc_addStackedEventHandler;            };            sleep ENH_SPR_Delay;          };          [str _unit, 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;          _unit call ENH_fnc_SPR_respawn;        };      }";
+			expression="if (!is3DEN && _value # 0 > 0 && !isMultiplayer) then      {        ENH_SPR_Ruleset = _value param [0, 0];        ENH_SPR_Delay = _value param [1, 20];        ENH_SPR_CanDie = _value param [2, false];        ENH_SPR_RestoreLoadout = _value param [3, false];        ENH_SPR_OnRespawnCode = compile (_value param [4, '']);        ENH_SPR_Positions =        [          allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x}        ];        {          _x setVariable ['ENH_SPR_OriginalSide', side group _x];          _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];          _x addEventHandler ['handleDamage',          {            params ['_unit', '', '_damage', '', '', '_index'];            if (!alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};            if (_unit getVariable ['ENH_SPR_Ticke', 0] == 0) then            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              _damage;            };            if (ENH_SPR_CanDie && _index in [1, 2] && _damage >= 1) exitWith            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              1;            };            if (_index < 8 && (_damage min 0.95) == 0.95) then            {              setAccTime 1;              _unit allowDamage false;              _unit setCaptive true;              _unit setUnconscious true;              _unit setVariable ['ENH_SPR_Ticke', (_unit getVariable ['ENH_SPR_Ticke', 0]) - 1];              if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};              moveOut _unit;              _unit spawn ENH_fnc_SPR_respawnTimer;            };            _damage min 0.95;          }];        } forEach (allUni select {_x getVariable ['ENH_SPR_Ticke', 0] > 0});                ENH_fnc_SPR_respawn =        {          scriptName 'ENH_Attribute_SPR_Respawn';          params ['_unit'];          if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};          if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};          private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;          private _positions = ENH_SPR_Positions select _sideID;          if (_positions isNotEqualTo []) then          {            switch (ENH_SPR_Ruleset) do            {              case 3:              {                _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);              };              case 2:              {                _unit setPos selectRandom _positions;              };            };          };          _unit setUnconscious false;          _unit allowDamage true;          _unit setDamage 0;          _unit switchMove '';          _unit call ENH_SPR_OnRespawnCode;          _unit spawn          {            sleep 8;            _this setCaptive false;          };        };                ENH_fnc_SPR_respawnTimer =        {          scriptName 'ENH_Attribute_SPR_RespawnTimer';          params ['_unit'];          private _respawnTime = time + ENH_SPR_Delay;          if (isPlayer _unit) then          {            private _ctrlRespawnTimer = (call BIS_fnc_displayMission) ctrlCreate ['RscStructuredText',-1];            _ctrlRespawnTimer ctrlSetPosition [0.25, 0, 0.5, 0.06];            _ctrlRespawnTimer ctrlSetBackgroundColor [0, 0, 0, 0.1];            _ctrlRespawnTimer ctrlCommit 0;            ENH_SPR_OriginalVolume = [soundVolume, musicVolume, radioVolume, speechVolume, environmentVolume];            0 cutText ['', 'BLACK OUT', 0.3];            0.3 fadeSound 0;            0.3 fadeMusic 0;            0.3 fadeRadio 0;            0.3 fadeSpeech 0;            0.3 fadeEnvironment 0;            showChat false;            while {time < _respawnTime} do            {              _ctrlRespawnTimer ctrlSetructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>%1</t>', [(_respawnTime - time), 'HH:MM'] call BIS_fnc_timeToString];              sleep 0.1;            };            ctrlDelete _ctrlRespawnTimer;            0 cutText ['', 'BLACK IN', 8];            8 fadeSound (ENH_SPR_OriginalVolume # 0);            8 fadeMusic (ENH_SPR_OriginalVolume # 1);            8 fadeRadio (ENH_SPR_OriginalVolume # 2);            8 fadeSpeech (ENH_SPR_OriginalVolume # 3);            8 fadeEnvironment (ENH_SPR_OriginalVolume # 4);            showChat true;            [              ['Respawned'],              [format ['GRID: %1', mapGridPosition _unit]],              [format ['Ticke left: %1', _unit getVariable 'ENH_SPR_Ticke']]            ] spawn BIS_fnc_EXP_camp_SITREP;          }          else          {            if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then            {              [                str _unit, 'onEachFrame',                {                  drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_this # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_this # 1) - time), 2];                },                [_unit, _respawnTime]              ] call BIS_fnc_addStackedEventHandler;            };            sleep ENH_SPR_Delay;          };          [str _unit, 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;          _unit call ENH_fnc_SPR_respawn;        };      }";
 			class Value
 			{
 				class data
@@ -1052,8 +1051,8 @@ class CustomAttributes
 		};
 		class Attribute2
 		{
-			property="ENH_AddObjectsToZeus";
-			expression="    if (!is3DEN && isServer && _value && !(allCurators isEqualTo [])) then    {      [] spawn      {        scriptName 'ENH_Attribute_AddObjectsToZeus';        while {true} do        {          {          _x addCuratorEditableObjects            [              entities [[], ['Logic'], true],              true            ];          } count allCurators;          sleep 60;        };      };    }";
+			property="ENH_AddObjecToZeus";
+			expression="    if (!is3DEN && isServer && _value && !(allCurators isEqualTo [])) then    {      [] spawn      {        scriptName 'ENH_Attribute_AddObjecToZeus';        while {true} do        {          {          _x addCuratorEditableObjec            [              entities [[], ['Logic'], true],              true            ];          } count allCurators;          sleep 60;        };      };    }";
 			class Value
 			{
 				class data
@@ -1262,7 +1261,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="tfar_core_notsnotconnectedhint";
+											value="tfar_core_nonotconnectedhint";
 										};
 									};
 									class Item8
@@ -1402,7 +1401,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="tfar_spectatorcanhearenemyunits";
+											value="tfar_spectatorcanhearenemyuni";
 										};
 									};
 									class Item18
@@ -1934,7 +1933,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_interaction_enableweaponattachments";
+											value="ace_interaction_enableweaponattachmen";
 										};
 									};
 									class Item56
@@ -1962,7 +1961,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_interaction_interactwithterrainobjects";
+											value="ace_interaction_interactwithterrainobjec";
 										};
 									};
 									class Item58
@@ -2116,7 +2115,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_explosives_punishnonspecialists";
+											value="ace_explosives_punishnonspecialis";
 										};
 									};
 									class Item69
@@ -2508,7 +2507,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_goggles_effects";
+											value="ace_goggles_effec";
 										};
 									};
 									class Item97
@@ -2928,7 +2927,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_nightvision_effectscaling";
+											value="ace_nightvision_effeccaling";
 										};
 									};
 									class Item127
@@ -2970,7 +2969,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_nightvision_aimdownsightsblur";
+											value="ace_nightvision_aimdownsighblur";
 										};
 									};
 									class Item130
@@ -2984,7 +2983,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_nightvision_disablenvgswithsights";
+											value="ace_nightvision_disablenvgswithsigh";
 										};
 									};
 									class Item131
@@ -2998,7 +2997,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_nightvision_shuttereffects";
+											value="ace_nightvision_shuttereffec";
 										};
 									};
 									class Item132
@@ -3082,7 +3081,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_overheating_showparticleeffects";
+											value="ace_overheating_showparticleeffec";
 										};
 									};
 									class Item138
@@ -3096,7 +3095,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_overheating_showparticleeffectsforeveryone";
+											value="ace_overheating_showparticleeffecforeveryone";
 										};
 									};
 									class Item139
@@ -3124,7 +3123,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_overheating_particleeffectsanddispersiondistance";
+											value="ace_overheating_particleeffecanddispersiondistance";
 										};
 									};
 									class Item141
@@ -3530,7 +3529,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_repair_addspareparts";
+											value="ace_repair_addsparepar";
 										};
 									};
 									class Item170
@@ -3614,7 +3613,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_scopes_forceuseofadjustmentturrets";
+											value="ace_scopes_forceuseofadjustmentturre";
 										};
 									};
 									class Item176
@@ -3768,7 +3767,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_switchunits_enableswitchunits";
+											value="ace_switchuni_enableswitchuni";
 										};
 									};
 									class Item187
@@ -3782,7 +3781,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_switchunits_switchtowest";
+											value="ace_switchuni_switchtowest";
 										};
 									};
 									class Item188
@@ -3796,7 +3795,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_switchunits_switchtoeast";
+											value="ace_switchuni_switchtoeast";
 										};
 									};
 									class Item189
@@ -3810,7 +3809,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_switchunits_switchtoindependent";
+											value="ace_switchuni_switchtoindependent";
 										};
 									};
 									class Item190
@@ -3824,7 +3823,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_switchunits_switchtocivilian";
+											value="ace_switchuni_switchtocivilian";
 										};
 									};
 									class Item191
@@ -3838,7 +3837,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_switchunits_enablesafezone";
+											value="ace_switchuni_enablesafezone";
 										};
 									};
 									class Item192
@@ -3852,7 +3851,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_switchunits_safezoneradius";
+											value="ace_switchuni_safezoneradius";
 										};
 									};
 									class Item193
@@ -4524,7 +4523,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_fortify_markobjectsonmap";
+											value="ace_fortify_markobjeconmap";
 										};
 									};
 									class Item241
@@ -4594,7 +4593,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_hearing_enabledforzeusunits";
+											value="ace_hearing_enabledforzeusuni";
 										};
 									};
 									class Item246
@@ -4608,7 +4607,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_hearing_autoaddearplugstounits";
+											value="ace_hearing_autoaddearplugstouni";
 										};
 									};
 									class Item247
@@ -4706,7 +4705,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_medical_blood_maxbloodobjects";
+											value="ace_medical_blood_maxbloodobjec";
 										};
 									};
 									class Item254
@@ -5364,7 +5363,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_medical_treatment_maxlitterobjects";
+											value="ace_medical_treatment_maxlitterobjec";
 										};
 									};
 									class Item301
@@ -6078,7 +6077,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="ace_zeus_autoaddobjects";
+											value="ace_zeus_autoaddobjec";
 										};
 									};
 									class Item352
@@ -24804,7 +24803,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -24897,7 +24896,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -24990,7 +24989,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25083,7 +25082,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25157,7 +25156,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25231,7 +25230,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25324,7 +25323,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25417,7 +25416,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25510,7 +25509,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25584,7 +25583,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25658,7 +25657,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25751,7 +25750,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25844,7 +25843,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -25937,7 +25936,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -26030,7 +26029,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -26104,7 +26103,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -26178,7 +26177,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -26271,7 +26270,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -26364,7 +26363,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -26457,7 +26456,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -26531,7 +26530,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -26605,7 +26604,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -28120,7 +28119,7 @@ class Mission
 				class Attribute2
 				{
 					property="ace_rearm_rearmCargo";
-					expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaulupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaulupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
 					class Value
 					{
 						class data
@@ -29834,7 +29833,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30006,7 +30005,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30120,7 +30119,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30213,7 +30212,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30306,7 +30305,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30399,7 +30398,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30473,7 +30472,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30547,7 +30546,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30640,7 +30639,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30733,7 +30732,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30825,7 +30824,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30898,7 +30897,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -30972,7 +30971,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -31164,7 +31163,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -31257,7 +31256,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -31311,12 +31310,12 @@ class Mission
 			};
 			name="Zeus_redacted";
 			id=464;
-			type="ModuleCuratorAddEditableObjects";
+			type="ModuleCuratorAddEditableObjec";
 			class CustomAttributes
 			{
 				class Attribute0
 				{
-					property="ModuleCuratorAddEditableObjects_Curator";
+					property="ModuleCuratorAddEditableObjec_Curator";
 					expression="_this setVariable ['Curator',_value,true];";
 					class Value
 					{
@@ -31335,7 +31334,7 @@ class Mission
 				};
 				class Attribute1
 				{
-					property="ModuleCuratorAddEditableObjects_AddCrew";
+					property="ModuleCuratorAddEditableObjec_AddCrew";
 					expression="_this setVariable ['AddCrew',_value,true];";
 					class Value
 					{
@@ -31421,7 +31420,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="<a href=ts://178.62.217.192/'>TS: 178.62.217.192 </a> " \n "<br/>" \n "<a href='https://games.ss220.space'>DISCORD: games.ss220.space</a> " \n "<br/>" \n "Адрес игрового сервера: games.ss220.space:2302" \n "<br/>" \n "Приятной игры и не забудьте включить музыку в настройках игры!";
+							value="<a href=://178.62.217.192/'>: 178.62.217.192 </a> " \n "<br/>" \n "<a href='https://games.ss220.space'>DISCORD: games.ss220.space</a> " \n "<br/>" \n "Адрес игрового сервера: games.ss220.space:2302" \n "<br/>" \n "Приятной игры и не забудьте включить музыку в настройках игры!";
 						};
 					};
 				};
@@ -31494,7 +31493,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -32671,7 +32670,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -32764,7 +32763,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -32857,7 +32856,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -32950,7 +32949,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -33141,7 +33140,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -33313,7 +33312,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -33387,7 +33386,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -33480,7 +33479,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -33573,7 +33572,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -33764,7 +33763,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -33955,7 +33954,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -34031,7 +34030,7 @@ class Mission
 			areaSize[]={55.636795,0,47.442062};
 			flags=1;
 			id=620;
-			type="ModuleHideTerrainObjects_F";
+			type="ModuleHideTerrainObjec_F";
 			atlOffset=-0.014063835;
 			class CustomAttributes
 			{
@@ -34111,7 +34110,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -34204,7 +34203,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -36784,7 +36783,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=817;
-					type="Land_Pallets_F";
+					type="Land_Palle_F";
 					atlOffset=8.5830688e-006;
 				};
 				class Item43
@@ -37853,8 +37852,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="MMFW_objectsettings_Carryable";
-							expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostCarryable";
+							property="MMFW_objecettings_Carryable";
+							expression="[_this, _value] call MMFW_objecettings_fnc_InitPostCarryable";
 							class Value
 							{
 								class data
@@ -37891,8 +37890,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="MMFW_objectsettings_Draggable";
-							expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostDraggable";
+							property="MMFW_objecettings_Draggable";
+							expression="[_this, _value] call MMFW_objecettings_fnc_InitPostDraggable";
 							class Value
 							{
 								class data
@@ -37911,7 +37910,7 @@ class Mission
 						class Attribute5
 						{
 							property="ace_rearm_rearmCargo";
-							expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+							expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaulupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaulupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
 							class Value
 							{
 								class data
@@ -38176,8 +38175,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="MMFW_objectsettings_Carryable";
-							expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostCarryable";
+							property="MMFW_objecettings_Carryable";
+							expression="[_this, _value] call MMFW_objecettings_fnc_InitPostCarryable";
 							class Value
 							{
 								class data
@@ -38214,8 +38213,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="MMFW_objectsettings_Draggable";
-							expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostDraggable";
+							property="MMFW_objecettings_Draggable";
+							expression="[_this, _value] call MMFW_objecettings_fnc_InitPostDraggable";
 							class Value
 							{
 								class data
@@ -38234,7 +38233,7 @@ class Mission
 						class Attribute5
 						{
 							property="ace_rearm_rearmCargo";
-							expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+							expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaulupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaulupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
 							class Value
 							{
 								class data
@@ -40890,7 +40889,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1125;
-					type="Land_Pallets_stack_F";
+					type="Land_Palle_stack_F";
 					atlOffset=-0.00019454956;
 				};
 			};
@@ -41072,7 +41071,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1135;
-					type="Land_Pallets_stack_F";
+					type="Land_Palle_stack_F";
 					atlOffset=-2.6702881e-005;
 				};
 				class Item9
@@ -41091,7 +41090,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1136;
-					type="Land_Pallets_stack_F";
+					type="Land_Palle_stack_F";
 					atlOffset=-1.5258789e-005;
 				};
 				class Item10
@@ -42169,7 +42168,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1224;
-					type="Land_Pallets_F";
+					type="Land_Palle_F";
 					atlOffset=0.010128021;
 				};
 				class Item36
@@ -43062,7 +43061,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1277;
-					type="Land_Pallets_F";
+					type="Land_Palle_F";
 					atlOffset=-3.8146973e-006;
 				};
 				class Item44
@@ -43081,7 +43080,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1278;
-					type="Land_Pallets_stack_F";
+					type="Land_Palle_stack_F";
 					atlOffset=-0.00037002563;
 				};
 				class Item45
@@ -44735,7 +44734,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1394;
-					type="Land_Pallets_F";
+					type="Land_Palle_F";
 					atlOffset=0.00072097778;
 				};
 				class Item33
@@ -45156,7 +45155,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1415;
-					type="Land_Pallets_stack_F";
+					type="Land_Palle_stack_F";
 					atlOffset=0.00023651123;
 				};
 			};
@@ -45249,8 +45248,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="MMFW_objectsettings_Carryable";
-							expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostCarryable";
+							property="MMFW_objecettings_Carryable";
+							expression="[_this, _value] call MMFW_objecettings_fnc_InitPostCarryable";
 							class Value
 							{
 								class data
@@ -45325,8 +45324,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="MMFW_objectsettings_Draggable";
-							expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostDraggable";
+							property="MMFW_objecettings_Draggable";
+							expression="[_this, _value] call MMFW_objecettings_fnc_InitPostDraggable";
 							class Value
 							{
 								class data
@@ -45613,8 +45612,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="MMFW_objectsettings_Carryable";
-							expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostCarryable";
+							property="MMFW_objecettings_Carryable";
+							expression="[_this, _value] call MMFW_objecettings_fnc_InitPostCarryable";
 							class Value
 							{
 								class data
@@ -45632,8 +45631,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="MMFW_objectsettings_Draggable";
-							expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostDraggable";
+							property="MMFW_objecettings_Draggable";
+							expression="[_this, _value] call MMFW_objecettings_fnc_InitPostDraggable";
 							class Value
 							{
 								class data
@@ -46168,7 +46167,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1525;
-					type="Land_Pallets_stack_F";
+					type="Land_Palle_stack_F";
 					atlOffset=-4.7683716e-006;
 				};
 				class Item40
@@ -46955,7 +46954,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Авторы миссии:" \n "Shield" \n "RedokPaw" \n "ArlordGS" \n "IT_Kotyara" \n "<br/>" \n "<br/>" \n "Авторы используемых в миссии модификаций:" \n "<br/>" \n "Динамическая погода - Tort" \n "<br/>" \n "Снаряжение магазинов - R3vo, Apricot_ale" \n "<br/>" \n "Динамическая музыка - Niklas Brettschneider, Shield";
+							value="Авторы миссии:" \n "Shield" \n "RedokPaw" \n "ArlordGS" \n "IT_Kotyara" \n "<br/>" \n "<br/>" \n "Авторы используемых в миссии модификаций:" \n "<br/>" \n "Динамическая погода - Tort" \n "<br/>" \n "Снаряжение магазинов - R3vo, Apricot_ale" \n "<br/>" \n "Динамическая музыка - Niklas Bretchneider, Shield";
 						};
 					};
 				};
@@ -47038,7 +47037,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""AllVehicles"" countType thislist > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-				onActivation="rearm = [(thislist select 0)] execVM ""scripts\service.sqf"";";
+				onActivation="rearm = [(thislist select 0)] execVM ""scrip\service.sqf"";";
 				sizeA=20;
 				sizeB=20;
 				repeatable=1;
@@ -47054,7 +47053,7 @@ class Mission
 			{
 				name="REMBASE_RU";
 				condition="(""AllVehicles"" countType thislist > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-				onActivation="rearm = [(thislist select 0)] execVM ""scripts\service.sqf"";";
+				onActivation="rearm = [(thislist select 0)] execVM ""scrip\service.sqf"";";
 				sizeA=20;
 				sizeB=20;
 				repeatable=1;
@@ -47614,7 +47613,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51332,7 +51331,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51405,7 +51404,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51477,7 +51476,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51550,7 +51549,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51623,7 +51622,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51696,7 +51695,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51769,7 +51768,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51842,7 +51841,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51915,7 +51914,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -51987,7 +51986,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52059,7 +52058,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52132,7 +52131,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52206,7 +52205,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52280,7 +52279,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52354,7 +52353,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52428,7 +52427,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52502,7 +52501,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52576,7 +52575,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52650,7 +52649,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52724,7 +52723,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52798,7 +52797,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52872,7 +52871,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -52946,7 +52945,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53020,7 +53019,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53094,7 +53093,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53168,7 +53167,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53343,7 +53342,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53415,7 +53414,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53487,7 +53486,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53559,7 +53558,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53632,7 +53631,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53706,7 +53705,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53882,7 +53881,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -53955,7 +53954,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54027,7 +54026,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54099,7 +54098,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54172,7 +54171,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54245,7 +54244,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54317,7 +54316,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54389,7 +54388,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54461,7 +54460,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54534,7 +54533,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54608,7 +54607,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54681,7 +54680,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54753,7 +54752,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54825,7 +54824,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54897,7 +54896,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -54969,7 +54968,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -55144,7 +55143,7 @@ class Mission
 						class Attribute0
 						{
 							property="speaker";
-							expression="_this setspeaker _value;";
+							expression="_this sepeaker _value;";
 							class Value
 							{
 								class data
@@ -55289,8 +55288,8 @@ class Mission
 				};
 				class Attribute1
 				{
-					property="MMFW_objectsettings_Carryable";
-					expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostCarryable";
+					property="MMFW_objecettings_Carryable";
+					expression="[_this, _value] call MMFW_objecettings_fnc_InitPostCarryable";
 					class Value
 					{
 						class data
@@ -55327,8 +55326,8 @@ class Mission
 				};
 				class Attribute3
 				{
-					property="MMFW_objectsettings_Draggable";
-					expression="[_this, _value] call MMFW_objectsettings_fnc_InitPostDraggable";
+					property="MMFW_objecettings_Draggable";
+					expression="[_this, _value] call MMFW_objecettings_fnc_InitPostDraggable";
 					class Value
 					{
 						class data
@@ -58304,7 +58303,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=2462;
-			type="Land_Pallets_stack_F";
+			type="Land_Palle_stack_F";
 			atlOffset=0.012973785;
 		};
 		class Item535
@@ -74600,7 +74599,7 @@ class Mission
 			{
 				presence=0.79822153;
 				dynamicSimulation=1;
-				receiveRemoteTargets=1;
+				receiveRemoteTarge=1;
 			};
 			id=3598;
 			type="UK3CB_TKA_I_ZsuTank";
