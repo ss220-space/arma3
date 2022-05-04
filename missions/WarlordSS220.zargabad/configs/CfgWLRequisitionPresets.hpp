@@ -6,9 +6,19 @@ class CfgWLRequisitionPresets
 		{
 			class Vehicles
 			{
+				class UK3CB_MDF_B_M1030
+				{
+					cost=50;
+					requirements[]={};
+				};
 				class B_Quadbike_01_F
 				{
 					cost=100;
+					requirements[]={};
+				};
+				class UK3CB_CW_US_B_EARLY_Willys_Jeep_Open
+				{
+					cost=200;
 					requirements[]={};
 				};
 				class rhsusf_mrzr4_d
@@ -101,6 +111,16 @@ class CfgWLRequisitionPresets
 					cost=3500;
 					requirements[]={};
 				};
+				class UK3CB_B_LAV25_HQ_US_DES
+				{
+					cost=3000;
+					requirements[]={};
+				};
+				class UK3CB_B_LAV25_US_DES
+				{
+					cost=4000;
+					requirements[]={};
+				};
 				class RHS_M6_wd
 				{
 					cost=4500;
@@ -149,7 +169,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_MELB_AH6M
 				{
-					cost=2800;
+					cost=3000;
 					requirements[]=
 					{
 						"H"
@@ -351,6 +371,31 @@ class CfgWLRequisitionPresets
 					cost=300;
 					requirements[]={};
 				};
+				class ACE_Box_Misc
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Smoke
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Combo
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_HE
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_medicalSupplyCrate
+				{
+					cost=300;
+					requirements[]={};
+				};
 			};
 			class Defences
 			{
@@ -377,6 +422,12 @@ class CfgWLRequisitionPresets
 					requirements[]={};
 					offset[]={0,2.3000002,0};
 				};
+				class RHS_M252_D
+				{
+					cost=1100;
+					requirements[]={};
+					offset[]={0,2.3000002,0};
+				};
 				class B_SAM_System_03_F
 				{
 					cost=27500;
@@ -395,6 +446,11 @@ class CfgWLRequisitionPresets
 		{
 			class Vehicles
 			{
+				class UK3CB_TKA_I_YAVA
+				{
+					cost=50;
+					requirements[]={};
+				};
 				class O_Quadbike_01_F
 				{
 					cost=100;
@@ -402,7 +458,7 @@ class CfgWLRequisitionPresets
 				};
 				class rhs_uaz_open_vdv
 				{
-					cost=350;
+					cost=250;
 					requirements[]={};
 				};
 				class rhs_tigr_vdv
@@ -430,9 +486,39 @@ class CfgWLRequisitionPresets
 					cost=800;
 					requirements[]={};
 				};
+				class UK3CB_TKA_I_UAZ_MG
+				{
+					cost=700;
+					requirements[]={};
+				};
+				class UK3CB_TKA_I_UAZ_AGS30
+				{
+					cost=1000;
+					requirements[]={};
+				};
+				class UK3CB_TKA_I_UAZ_SPG9
+				{
+					cost=1200;
+					requirements[]={};
+				};
+				class UK3CB_ARD_I_GAZ_Vodnik_PKT
+				{
+					cost=800;
+					requirements[]={};
+				};
 				class rhsgref_BRDM2_vdv
 				{
 					cost=1400;
+					requirements[]={};
+				};
+				class UK3CB_TKA_O_GAZ_Vodnik_HMG
+				{
+					cost=1800;
+					requirements[]={};
+				};
+				class UK3CB_TKA_O_GAZ_Vodnik_GMG
+				{
+					cost=2000;
 					requirements[]={};
 				};
 				class RHS_Ural_Repair_VDV_01
@@ -462,7 +548,7 @@ class CfgWLRequisitionPresets
 				};
 				class rhs_btr80_vdv
 				{
-					cost=2500;
+					cost=2200;
 					requirements[]={};
 				};
 				class rhs_btr80a_vdv
@@ -525,6 +611,16 @@ class CfgWLRequisitionPresets
 					cost=5000;
 					requirements[]={};
 				};
+				class rhs_t15_tv
+				{
+					cost=4800;
+					requirements[]={};
+				};
+				class rhs_t14_tv
+				{
+					cost=6500;
+					requirements[]={};
+				};
 			};
 			class Aircraft
 			{
@@ -538,7 +634,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_Mi8mt_vdv
 				{
-					cost=2500;
+					cost=1800;
 					requirements[]=
 					{
 						"H"
@@ -554,7 +650,7 @@ class CfgWLRequisitionPresets
 				};
 				class RHS_Mi8mt_Cargo_vdv
 				{
-					cost=4000;
+					cost=2500;
 					requirements[]=
 					{
 						"H"
@@ -655,6 +751,31 @@ class CfgWLRequisitionPresets
 					cost=200;
 					requirements[]={};
 				};
+				class ACE_Box_Misc
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Smoke
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_Combo
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_Box_82mm_Mo_HE
+				{
+					cost=300;
+					requirements[]={};
+				};
+				class ACE_medicalSupplyCrate
+				{
+					cost=300;
+					requirements[]={};
+				};
 			};
 			class Defences
 			{
@@ -709,6 +830,12 @@ class CfgWLRequisitionPresets
 				class rhs_Metis_9k115_2_msv
 				{
 					cost=500;
+					requirements[]={};
+					offset[]={0,2.3000002,0};
+				};
+				class rhs_2b14_82mm_msv
+				{
+					cost=1100;
 					requirements[]={};
 					offset[]={0,2.3000002,0};
 				};
