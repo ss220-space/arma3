@@ -53,7 +53,6 @@ addons[]=
 	"CUP_CABuildings2_Misc_Cargo",
 	"rhs_c_weapons",
 	"ace_compat_rhs_afrf3",
-	"jsrs_soundmod_rhs_afrf_weapons",
 	"A3_Weapons_F",
 	"ace_optics",
 	"A3_Weapons_F_Items",
