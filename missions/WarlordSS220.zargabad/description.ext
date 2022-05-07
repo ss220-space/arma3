@@ -35,7 +35,6 @@ class Extended_PreInit_EventHandlers
 		Init = "outlw_magRepack_Var = ExecVM 'XEH_preInit.sqf'";
 	};
 };
-cba_settings_hasSettingsFile = 0;
 
 //Применение модуля уборки
 corpseManagerMode = 3;
