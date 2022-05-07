@@ -13,7 +13,7 @@ class CfgFunctions
 		{
 			file = "scripts\serverSide";
 			
-			class Server_onConnected {};
+			class Server_teamRestrict {};
 		};
 	};
 };

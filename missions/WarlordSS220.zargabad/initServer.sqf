@@ -1,1 +1,2 @@
-SS220_var_playersArray = [];
+SS220_var_sidesArray = [];
+SS220_var_playerPointsArray = [];
