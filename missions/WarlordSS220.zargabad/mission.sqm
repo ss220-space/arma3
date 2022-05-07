@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3784.5298,36.840088,2634.1443};
-		dir[]={-0.79837865,-0.43318877,-0.41827595};
-		up[]={-0.3837263,0.90129805,-0.20103674};
-		aside[]={-0.46407789,-1.8859282e-007,0.88580269};
+		pos[]={4024.6016,27.510971,3546.8887};
+		dir[]={0.32071403,-0.13037126,0.93817317};
+		up[]={0.042175051,0.99146348,0.12337439};
+		aside[]={0.94624889,3.7843711e-007,-0.32347405};
 	};
 };
 binarizationWanted=0;
@@ -838,6 +838,25 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute5
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -869,25 +888,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute5
-		{
-			property="ReviveMode";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
 				};
 			};
 		};
@@ -48655,13 +48655,12 @@ class Mission
 						angles[]={0.0050090947,3.5229993,6.2631841};
 					};
 					side="Independent";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=3566;
 					type="UK3CB_TKM_I_RIF_1";
-					atlOffset=2.4996567;
 				};
 			};
 			class Attributes
