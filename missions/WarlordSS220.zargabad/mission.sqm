@@ -5,18 +5,18 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=137;
+	toggles=9;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=3679;
+		nextID=3683;
 	};
 	class MarkerIDProvider
 	{
-		nextID=14;
+		nextID=17;
 	};
 	class LayerIndexProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3854.2576,67.422943,5733.0293};
-		dir[]={0,-0.70710677,0.70710683};
-		up[]={0,0.70710677,0.70710671};
-		aside[]={0.99999994,0,-0};
+		pos[]={3784.5298,36.840088,2634.1443};
+		dir[]={-0.79837865,-0.43318877,-0.41827595};
+		up[]={-0.3837263,0.90129805,-0.20103674};
+		aside[]={-0.46407789,-1.8859282e-007,0.88580269};
 	};
 };
 binarizationWanted=0;
@@ -128,13 +128,14 @@ addons[]=
 	"ace_respawn",
 	"ace_fortify",
 	"UK3CB_Factions_TKC_I",
-	"UK3CB_Factions_TKC_O"
+	"UK3CB_Factions_TKC_O",
+	"A3_Ui_F_Orange"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=59;
+		items=60;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -521,6 +522,13 @@ class AddonsMetaData
 			name="3CB Factions - TKC";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
+		};
+		class Item59
+		{
+			className="A3_Ui_F_Orange";
+			name="Arma 3 Orange - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -22548,7 +22556,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1378;
+		items=1382;
 		class Item0
 		{
 			dataType="Logic";
@@ -75358,11 +75366,50 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={3855.1001,42.18,5770.792};
-			name="marker_13";
+			name="EAST_REMBASE";
 			text="Ремпункт";
-			type="o_support";
+			type="o_Ordnance";
 			id=3678;
 			atlOffset=0.00035476685;
+		};
+		class Item1378
+		{
+			dataType="Marker";
+			position[]={3969.395,41.408001,5812.6938};
+			name="EAST_HOSPITAL";
+			text="Медицинская палатка";
+			type="o_med";
+			id=3679;
+			atlOffset=1.0631409;
+		};
+		class Item1379
+		{
+			dataType="Marker";
+			position[]={4268.8159,17,4134.9512};
+			name="REMBASE_SHARE";
+			text="Ремпункт";
+			type="n_Ordnance";
+			id=3680;
+		};
+		class Item1380
+		{
+			dataType="Marker";
+			position[]={3855.0491,10.9,2702.4141};
+			name="WEST_HOSPITAL";
+			text="Госпиталь";
+			type="b_med";
+			id=3681;
+			atlOffset=-0.0033063889;
+		};
+		class Item1381
+		{
+			dataType="Marker";
+			position[]={3826.1841,11.183,2760.7119};
+			name="WEST_REPAIR";
+			text="Рембаза";
+			type="b_Ordnance";
+			id=3682;
+			atlOffset=-0.00043869019;
 		};
 	};
 	class Connections
