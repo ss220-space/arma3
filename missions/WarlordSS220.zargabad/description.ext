@@ -68,12 +68,15 @@ respawnDelay = 30;
 respawnDialog = 1;
 respawnOnStart = 0;
 saving = 0;
-respawnTemplates[] = {"MenuInventory","MenuPosition"};
-respawnTemplatesVirtual[] = {};
+
+/* Отключено в связи с несовместимостью с ванильным Warlords 
+ respawnTemplates[] = {"MenuInventory","MenuPosition"};
+ respawnTemplatesVirtual[] = {};
 // Роли для респаунов - Shield
 #include "Configs\CfgRoles.hpp"
 // Пресеты для респаунов - Arlord
 #include "Configs\cfgRespawnInventory.hpp"
+*/
 
 //Include hpp файлов переснаряжения магазинов - Shield
 #include "Configs\defines.hpp"
