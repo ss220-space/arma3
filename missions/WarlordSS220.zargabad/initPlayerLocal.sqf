@@ -22,9 +22,9 @@ if !(_didJIP) then
 {
     sleep 10;
     player setVariable ["BIS_WL_funds", 500, true];
-    [SS220_var_sidesArray, (getPlayerUID _unit), 500] call BIS_fnc_addToPairs;
+    [SS220_var_sidesArray, (getPlayerUID _playerUnit), 500] call BIS_fnc_addToPairs;
 } else {
-    private _playerInPoints = ([SS220_var_playerPointsArray, (getPlayerUID _unit)] call BIS_fnc_findInPairs);
+    private _playerInPoints = ([SS220_var_playerPointsArray, (getPlayerUID _playerUnit)] call BIS_fnc_findInPairs);
     
     if (_playerInPoints isEqualTo -1) then {
         private _playerPoints = ((SS220_var_playerPointsArray select _playerInPoints) select 1);
@@ -34,7 +34,7 @@ if !(_didJIP) then
 
 while { true } do {
     sleep 600;
-    [SS220_var_sidesArray, (getPlayerUID _unit), (player getVariable "BIS_WL_funds")] call BIS_fnc_addToPairs;
+    [SS220_var_sidesArray, (getPlayerUID _playerUnit), (player getVariable "BIS_WL_funds")] call BIS_fnc_addToPairs;
 };
 
 // Проверка баланса команд. Относительность BLUFOR/OPFOR 1:2 - Shield
