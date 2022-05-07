@@ -1,3 +1,4 @@
+/* Отключено в связи с несовместимостью с ванильным Warlords 
 // Американские лодауты - Arlord, Shield
 [west,"rifleman_us"] call BIS_fnc_addRespawnInventory;
 [west,"sniper_us"] call BIS_fnc_addRespawnInventory;
@@ -19,7 +20,7 @@
 [east,"aa_ru"] call BIS_fnc_addRespawnInventory;
 [east,"gren_ru"] call BIS_fnc_addRespawnInventory;
 [east,"co_ru"] call BIS_fnc_addRespawnInventory;
-
+*/
 // Переасигн кураторов чтобы не было ошибки "черного экрана" - Shield
 {
 	if (!isnull (getassignedcuratorunit _x)) then {
