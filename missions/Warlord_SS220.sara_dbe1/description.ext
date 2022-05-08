@@ -1,0 +1,99 @@
+author			= "Shield, ArlordsGS, IT_Kotyara and RedokPaw";
+onLoadName		= "SS220 Warlords (Zargabad)";
+briefingName = "SS220 Warlords (Zargabad)";
+onLoadMission	= "Уничтожайте противника и захватите его базу для победы.";
+onLoadIntro = "Уничтожайте противника и захватите его базу для победы.";
+loadScreen		= "images\logo.paa";
+overviewPicture	= "images\logo.paa";
+overviewText = "Уничтожайте противника и захватите его базу на карте Заргабад, Такистан";
+
+class Header
+{
+	gameType =  Warlords;
+	minPlayers =  2;
+	maxPlayers = 104;
+};
+
+//Настройки Чата - Shield
+/*
+0 = Global
+1 = Side
+2 = Command
+3 = Group
+4 = Vehicle
+5 = Direct
+6 = System
+*/
+disableChannels[]={0,2,5};
+
+//Применение настроек CBA - Shield 
+//Конфигурация функций CBA 
+class Extended_PreInit_EventHandlers
+{
+	class outlw_magRepack
+	{
+		Init = "outlw_magRepack_Var = ExecVM 'XEH_preInit.sqf'";
+	};
+};
+
+//Применение модуля уборки
+corpseManagerMode = 3;
+corpseLimit = 35; 
+corpseRemovalMinTime = 420;
+corpseRemovalMaxTime = 6400;
+wreckManagerMode = 1;
+wreckLimit = 20;
+wreckRemovalMinTime = 420;
+wreckRemovalMaxTime = 6400;
+minPlayerDistance = 50;
+
+//Настройки администрирования
+enableDebugConsole = 1;
+joinUnassigned = 1;
+skipLobby = 0;
+
+//Послабление настроек безопасности - Shield 
+allowFunctionsLog = 1;
+allowFunctionsRecompile = 0;
+zeusCompositionScriptLevel = 1;
+
+//Временно отключен из-за проблем с совместимостью CBA_A3
+//#include "Configs\CfgRemoteExec.hpp"
+
+//Респауны - Arlord
+respawn = 3;
+respawnButton = 1;
+respawnDelay = 30;
+respawnDialog = 1;
+respawnOnStart = 0;
+saving = 0;
+
+/* Отключено в связи с несовместимостью с ванильным Warlords 
+ respawnTemplates[] = {"MenuInventory","MenuPosition"};
+ respawnTemplatesVirtual[] = {};
+// Роли для респаунов - Shield
+#include "Configs\CfgRoles.hpp"
+// Пресеты для респаунов - Arlord
+#include "Configs\cfgRespawnInventory.hpp"
+*/
+
+//Include hpp файлов переснаряжения магазинов - Shield
+#include "Configs\defines.hpp"
+#include "Configs\MagRepack_Dialog_Main.hpp"
+#include "Configs\MagRepack_Dialog_About.hpp"
+
+//Конфигурация кастомных функций 
+#include "Configs\CfgFunctions.hpp"
+
+//Конфиг музыки
+#include "Configs\CfgMusic.hpp"
+
+//Конфиг дебрифинга
+#include "Configs\CfgDebriefing.hpp"
+
+//Далее классы Warlord.
+//Конфиг реквизиции (запросов)
+#include "Configs\CfgWLRequisitionPresets.hpp"
+
+//Конфиг фракций
+#include "Configs\CfgWLFactionAssets.hpp"
