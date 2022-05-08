@@ -7,22 +7,22 @@ class CfgRespawnInventory
 		role = "Assault";
 
 		weapons[] = {
-			"rhs_weap_hk416d145_wd_grip3",
-			"rhs_weap_m72a7"
+			"rhs_weap_m4a1", 
+			"rhs_weap_M136_hedp" 
 		};
 
 		magazines[] = { 
-			"rhs_mag_m67",
-			"rhs_mag_m67",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag"
+			"rhs_mag_m67", 
+			"rhs_mag_m67", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag" 
 		};
 
 		items[] = { 
@@ -31,23 +31,22 @@ class CfgRespawnInventory
 		};
 
 		linkedItems[] = { 
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"ItemMap", 
+			"ItemCompass", 
+			"ItemWatch", 
+			"ItemRadio", 
 			"ItemGPS",
 			"ACE_MapTools",
-			"ACE_EarPlugs",
-			"rhsusf_acc_SF3P556",
-			"rhsusf_acc_anpeq15side_bk",
-			"rhsusf_acc_kac_grip",
-			"rhsusf_acc_RX01",
-			"rhsusf_shemagh2_gogg_od",
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN",
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN"
+			"ACE_EarPlugs", 
+			"rhsusf_acc_anpeq15_top", 
+			"rhsusf_acc_su230a", 
+			"rhsusf_acc_kac_grip", 
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_ach_helmet_ocp",
+			"rhsusf_spcs_ocp_rifleman"
 		};
 
-		uniformClass = "UK3CB_ADM_B_U_Tshirt_01_WDL_03";
+		uniformClass = "rhs_uniform_cu_ocp_101st";
 	};
 
 	class sniper_us 
@@ -57,23 +56,18 @@ class CfgRespawnInventory
 		role = "Recon";
 
 		weapons[] = { 
-			"rhs_weap_XM2010_wd",
-			"rhsusf_bino_lrf_Vector21"
+			"rhs_weap_m14ebrri", 
+			"rhsusf_bino_lrf_Vector21" 
 		};
 
 		magazines[] = { 
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_20Rnd_762x51_m118_special_Mag", 
+			"rhsusf_20Rnd_762x51_m118_special_Mag", 
+			"rhsusf_20Rnd_762x51_m118_special_Mag", 
+			"rhsusf_20Rnd_762x51_m118_special_Mag", 
+			"rhsusf_20Rnd_762x51_m118_special_Mag", 
+			"rhsusf_20Rnd_762x51_m118_special_Mag", 
+			"rhsusf_20Rnd_762x51_m118_special_Mag", 
 			"rhs_mag_m67", 
 			"rhs_mag_m67" 
 		};
@@ -92,14 +86,14 @@ class CfgRespawnInventory
 			"ACE_MapTools",
 			"ACE_EarPlugs",
 			"ACE_RangeCard",
-			"rhsusf_shemagh2_gogg_od", 
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN", 
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN", 
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_spcs_ocp_sniper", 
+			"rhsusf_ach_helmet_ESS_ocp_alt", 
 			"rhsusf_acc_harris_bipod", 
 			"rhsusf_acc_LEUPOLDMK4" 
 		};
 
-		uniformClass = "UK3CB_CW_US_B_LATE_U_CombatUniform_Ghillie_01_WDL"; 
+		uniformClass = "rhs_uniform_cu_ocp_101st"; 
 	};
 
 	class at_us 
@@ -108,19 +102,19 @@ class CfgRespawnInventory
 		role = "Support";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa"; 
 		weapons[] = { 
-			"rhs_weap_hk416d145_wd_grip3", 
+			"rhs_weap_m4a1", 
 			"rhs_weap_maaws" 
 		};
 
 		magazines[] = { 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
 			"rhs_mag_maaws_HE", 
 			"rhs_mag_maaws_HEDP", 
 			"rhs_mag_maaws_HEAT", 
@@ -140,19 +134,17 @@ class CfgRespawnInventory
 			"ItemRadio", 
 			"ItemGPS",
 			"ACE_EarPlugs",
-			"ACE_MapTools",
-			"rhsusf_shemagh2_gogg_od",
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN",
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN",
-			"rhsusf_acc_SF3P556",
-			"rhsusf_acc_RX01",
-			"rhsusf_acc_anpeq15side_bk",
-			"rhs_optic_maaws",
-			"rhsusf_acc_kac_grip"
+			"ACE_MapTools", 
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_spcs_ocp_saw", 
+			"rhsusf_ach_helmet_ESS_ocp_alt", 
+			"rhsusf_acc_su230a", 
+			"rhs_optic_maaws", 
+			"rhsusf_acc_kac_grip" 
 		};
 
-		uniformClass = "UK3CB_ADM_B_U_Tshirt_01_WDL_03"; 
-		backpack = "UK3CB_B_Alice_Med_K"; 
+		uniformClass = "rhs_uniform_cu_ocp_101st"; 
+		backpack = "rhsusf_assault_eagleaiii_ocp"; 
 	};
 
 	class mg_us 
@@ -161,15 +153,15 @@ class CfgRespawnInventory
 		icon = "iconManEXP";
 		role = "Support";
 		weapons[] = { 
-			"UK3CB_MG3_Railed" 
+			"rhs_weap_m249_pip_S" 
 		}; 
 
 		magazines[] = { 
-			"UK3CB_MG3_100rnd_762x51_WM", 
-			"UK3CB_MG3_100rnd_762x51_WM", 
-			"UK3CB_MG3_100rnd_762x51_WM", 
-			"UK3CB_MG3_100rnd_762x51_WM", 
-			"UK3CB_MG3_100rnd_762x51_WM", 
+			"rhsusf_200Rnd_556x45_box", 
+			"rhsusf_200Rnd_556x45_box", 
+			"rhsusf_200Rnd_556x45_box", 
+			"rhsusf_200Rnd_556x45_box", 
+			"rhsusf_200Rnd_556x45_box", 
 			"rhs_mag_m67", 
 			"rhs_mag_m67" 
 		}; 
@@ -188,14 +180,16 @@ class CfgRespawnInventory
 			"ACE_MapTools",
 			"ACE_EarPlugs",
 			"ACE_SpareBarrel",
-			"rhsusf_shemagh2_gogg_od",
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN",
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN",
-			"rhsusf_acc_ACOG_MDO"
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_spcs_ocp_machinegunner", 
+			"rhsusf_ach_helmet_ESS_ocp_alt", 
+			"rhsusf_acc_saw_lw_bipod", 
+			"rhsusf_acc_SF3P556", 
+			"rhsusf_acc_g33_xps3" 
 		}; 
 
 		uniformClass = "rhs_uniform_cu_ocp_101st"; 
-		backpack = "UK3CB_B_Alice_Med_K"; 
+		backpack = "rhsusf_assault_eagleaiii_ocp"; 
 	};
 
 	class medic_us 
@@ -205,18 +199,18 @@ class CfgRespawnInventory
 		role = "Support";
 
 		weapons[] = { 
-			"rhs_weap_hk416d145_wd_grip3" 
+			"rhs_weap_m4a1" 
 		};
 
 		magazines[] = { 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_an_m8hc",
 			"rhs_mag_an_m8hc",
 			"rhs_mag_an_m8hc",
@@ -248,40 +242,38 @@ class CfgRespawnInventory
 			"ACE_MapTools",
 			"ACE_EarPlugs",
 			"ACE_surgicalKit",
-			"ItemGPS",
-			"rhsusf_shemagh2_gogg_od",
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN",
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN",
-			"rhsusf_acc_anpeq15side_bk",
-			"rhsusf_acc_RX01",
-			"rhsusf_acc_SF3P556",
-			"rhsusf_acc_kac_grip"
+			"ItemGPS", 
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_spcs_ocp_medic", 
+			"rhsusf_ach_helmet_ESS_ocp_alt", 
+			"rhsusf_acc_su230a", 
+			"rhsusf_acc_kac_grip" 
 		};
 
-		uniformClass = "UK3CB_ADM_B_U_Tshirt_01_WDL_03";
-		backpack = "UK3CB_B_Alice_Med_K";
+		uniformClass = "rhs_uniform_cu_ocp_101st"; 
+		backpack = "rhsusf_assault_eagleaiii_ocp"; 
 	};
 
 	class aa_us 
 	{ 
-		displayName = "Специалист АА";
+		displayName = "Специалист АА"; 
 		icon = "iconMan";
 		role = "Support";
 
 		weapons[] = { 
-			"rhs_weap_hk416d145_wd_grip3",
-			"rhs_weap_fim92"
+			"rhs_weap_m4a1", 
+			"rhs_weap_fim92" 
 		};
 
 		magazines[] = { 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
 			"rhs_fim92_mag", 
 			"rhs_fim92_mag", 
 			"rhs_mag_m67", 
@@ -301,17 +293,15 @@ class CfgRespawnInventory
 			"ItemGPS",
 			"ACE_MapTools",
 			"ACE_EarPlugs", 
-			"rhsusf_shemagh2_gogg_od", 
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN", 
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN", 
-			"rhsusf_acc_SF3P556",
-			"rhsusf_acc_anpeq15side_bk",
-			"rhsusf_acc_RX01", 
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_spcs_ocp_saw", 
+			"rhsusf_ach_helmet_ESS_ocp_alt", 
+			"rhsusf_acc_su230a", 
 			"rhsusf_acc_kac_grip" 
 		};
 
-		uniformClass = "UK3CB_ADM_B_U_Tshirt_01_WDL_03"; 
-		backpack = "UK3CB_B_Alice_Med_K"; 
+		uniformClass = "rhs_uniform_cu_ocp_101st"; 
+		backpack = "rhsusf_assault_eagleaiii_ocp"; 
 	};
 
 	class eng_us 
@@ -321,16 +311,16 @@ class CfgRespawnInventory
 		role = "Support";
 		
 		weapons[] = { 
-			"rhs_weap_hk416d145_wd_grip3" 
+			"rhs_weap_m4a1" 
 		}; 
 
 		magazines[] = { 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
 			"rhs_mag_m67",
 			"rhs_mag_m67" 
 		}; 
@@ -359,17 +349,15 @@ class CfgRespawnInventory
 			"ACE_SLAMBottomMine",
 			"rhsusf_mine_m14",
 			"rhsusf_mine_m14", 
-			"rhsusf_shemagh2_gogg_od", 
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN", 
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN", 
-			"rhsusf_acc_SF3P556",
-			"rhsusf_acc_anpeq15side_bk",
-			"rhsusf_acc_RX01",
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_spcs_ocp_saw", 
+			"rhsusf_ach_helmet_ESS_ocp_alt", 
+			"rhsusf_acc_su230a", 
 			"rhsusf_acc_kac_grip" 
 		}; 
 
-		uniformClass = "UK3CB_ADM_B_U_Tshirt_01_WDL_03"; 
-		backpack = "UK3CB_B_Alice_Med_K"; 
+		uniformClass = "rhs_uniform_cu_ocp_101st"; 
+		backpack = "rhsusf_assault_eagleaiii_ocp"; 
 	}; 
 
 	class gren_us 
@@ -379,18 +367,18 @@ class CfgRespawnInventory
 		role = "Assault";
 
 		weapons[] = { 
-			"rhs_weap_hk416d145_m320" 
+			"rhs_weap_m4a1_carryhandle_m203" 
 		};
 		
 		magazines[] = { 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
 			"rhs_mag_M433_HEDP", 
 			"rhs_mag_M433_HEDP", 
 			"rhs_mag_M433_HEDP", 
@@ -418,16 +406,15 @@ class CfgRespawnInventory
 			"ItemGPS",
 			"ACE_EarPlugs",
 			"ACE_MapTools", 
-			"rhsusf_shemagh2_gogg_od", 
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN", 
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN", 
-			"rhsusf_acc_SF3P556",
-			"rhsusf_acc_anpeq15side_bk",
-			"rhsusf_acc_RX01",
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_spcs_ocp_saw", 
+			"rhsusf_ach_helmet_ESS_ocp_alt", 
+			"rhsusf_acc_su230a", 
+			"rhsusf_acc_grip_m203_blk" 
 		};
 
-		uniformClass = "UK3CB_ADM_B_U_Tshirt_01_WDL_03"; 
-		backpack = "UK3CB_B_Alice_Med_K"; 
+		uniformClass = "rhs_uniform_cu_ocp_101st"; 
+		backpack = "rhsusf_assault_eagleaiii_ocp"; 
 	}; 
 
 	class co_us 
@@ -437,19 +424,19 @@ class CfgRespawnInventory
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa";
 
 		weapons[] = { 
-			"rhs_weap_hk416d145_m320", 
+			"rhs_weap_m4a1_blockII_M203_bk", 
 			"Binocular" 
 		};
 
 		magazines[] = { 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag", 
 			"rhs_mag_M433_HEDP", 
 			"rhs_mag_M433_HEDP", 
 			"rhs_mag_M433_HEDP", 
@@ -472,15 +459,15 @@ class CfgRespawnInventory
 			"ItemGPS",
 			"ACE_MapTools",
 			"ACE_EarPlugs",
-			"rhsusf_shemagh2_gogg_od", 
-			"UK3CB_TKA_B_V_GA_HEAVY_TAN", 
-			"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_BRN", 
-			"rhsusf_acc_SF3P556",
-			"rhsusf_acc_su230a",
+			"rhsusf_oakley_goggles_clr", 
+			"rhsusf_spcs_ocp_saw", 
+			"rhsusf_ach_helmet_ESS_ocp_alt", 
+			"rhsusf_acc_su230a", 
+			"rhsusf_acc_grip_m203_blk", 
 			"rhsusf_acc_anpeq15side_bk" 
 		};
 
-		uniformClass = "UK3CB_ADM_B_U_Tshirt_01_WDL_03"; 
+		uniformClass = "rhs_uniform_cu_ocp_101st"; 
 		backpack = "tf_anprc155_coyote";
 	};
 
@@ -491,23 +478,23 @@ class CfgRespawnInventory
 		role = "Assault";
 		
 		weapons[] = { 
-			"rhs_weap_savz58v_ris_grip3", 
-			"rhs_weap_rpg75" 
+			"rhs_weap_ak103_2", 
+			"rhs_weap_rshg2" 
 		};
 
 		magazines[] = { 
-			"rhs_mag_rgd5",
-			"rhs_mag_rgd5",
-			"rhs_rpg75_mag",
-			"rhs_30Rnd_762x39mm_Savz58",
-			"rhs_30Rnd_762x39mm_Savz58",
-			"rhs_30Rnd_762x39mm_Savz58",
-			"rhs_30Rnd_762x39mm_Savz58",
-			"rhs_30Rnd_762x39mm_Savz58",
-			"rhs_30Rnd_762x39mm_Savz58",
-			"rhs_30Rnd_762x39mm_Savz58",
-			"rhs_30Rnd_762x39mm_Savz58",
-			"rhs_30Rnd_762x39mm_Savz58" 
+			"rhs_mag_rgd5", 
+			"rhs_mag_rgd5", 
+			"rhs_rshg2_mag", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer" 
 		};
 
 		items[] = { 
@@ -523,16 +510,13 @@ class CfgRespawnInventory
 			"ItemGPS",
 			"ACE_EarPlugs",
 			"ACE_MapTools",
-			"rhsgref_acc_zendl",
-			"rhs_acc_perst3",
-			"rhs_acc_grip_ffg2",
-			"rhs_acc_rakursPM", 
-			"rhs_6b47",
-			"rhsusf_shemagh_gogg_grn",
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02" 
+			"rhs_acc_dtk", 
+			"rhs_acc_pkas", 
+			"rhs_6b23_digi_6sh92", 
+			"rhs_6b28" 
 		};
 
-		uniformClass = "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK"; 
+		uniformClass = "rhs_uniform_vdv_emr_des"; 
 	};
 
 	class sniper_ru 
@@ -542,28 +526,22 @@ class CfgRespawnInventory
 		role = "Recon";
 	
 		weapons[] = { 
-			"rhs_weap_t5000" 
+			"rhs_weap_svdp" 
 		};
 
 		magazines[] = { 
 			"rhs_mag_rgd5", 
 			"rhs_mag_rgd5", 
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000",
-			"rhs_5Rnd_338lapua_t5000"
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14", 
+			"rhs_10Rnd_762x54mmR_7N14" 
 		};
 
 		items[] = { 
@@ -581,14 +559,12 @@ class CfgRespawnInventory
 			"ACE_EarPlugs",
 			"ACE_RangeCard",
 			"rhs_pdu4", 
-			"rhs_acc_harris_swivel",
-			"rhs_acc_dh520x56",
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02",
-			"rhsusf_shemagh_gogg_grn",
-			"rhs_6b47"
+			"rhs_acc_pso1m2", 
+			"rhs_6b23_digi_6sh92", 
+			"rhs_6b28" 
 		};
 
-		uniformClass = "UK3CB_CW_SOV_O_Early_U_Sniper_Uniform_01_Ghillie_Top_KLMK"; 
+		uniformClass = "rhs_uniform_vdv_emr_des"; 
 	}; 
 
 	class mg_ru 
@@ -598,17 +574,17 @@ class CfgRespawnInventory
 		role = "Support";
 		
 		weapons[] = { 
-			"rhs_weap_fnmag" 
+			"rhs_weap_pkp" 
 		};
 
 		magazines[] = { 
 			"rhs_mag_rgd5", 
 			"rhs_mag_rgd5", 
-			"rhsusf_100Rnd_762x51", 
-			"rhsusf_100Rnd_762x51", 
-			"rhsusf_100Rnd_762x51", 
-			"rhsusf_100Rnd_762x51", 
-			"rhsusf_100Rnd_762x51" 
+			"rhs_100Rnd_762x54mmR", 
+			"rhs_100Rnd_762x54mmR", 
+			"rhs_100Rnd_762x54mmR", 
+			"rhs_100Rnd_762x54mmR", 
+			"rhs_100Rnd_762x54mmR" 
 		};
 
 		items[] = { 
@@ -625,14 +601,13 @@ class CfgRespawnInventory
 			"ACE_SpareBarrel",
 			"ACE_EarPlugs",
 			"ACE_MapTools",
-			"rhsusf_acc_ELCAN",
-			"rhsusf_shemagh_gogg_grn", 
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02", 
-			"rhs_6b47" 
+			"rhs_acc_1p29", 
+			"rhs_6b23_digi_6sh92", 
+			"rhs_6b28" 
 		}; 
 
-		uniformClass = "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK"; 
-		backpack = "UK3CB_B_Tactical_Backpack"; 
+		uniformClass = "rhs_uniform_vdv_emr_des"; 
+		backpack = "rhs_tortila_emr"; 
 	};
 
 	class medic_ru 
@@ -642,21 +617,21 @@ class CfgRespawnInventory
 		role = "Support";
 		
 		weapons[] = { 
-			"rhs_weap_savz58v_ris_grip3" 
+			"rhs_weap_ak103_2" 
 		};
 
 		magazines[] = { 
 			"rhs_mag_rgd5", 
 			"rhs_mag_rgd5", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58" 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer" 
 		};
 
 		items[] = { 
@@ -682,17 +657,14 @@ class CfgRespawnInventory
 			"ACE_MapTools",
 			"ACE_surgicalKit",
 			"ACE_EarPlugs",
-			"ItemGPS",
-			"rhsgref_acc_zendl",
-			"rhs_acc_perst3",
-			"rhs_acc_rakursPM",
-			"rhs_acc_grip_ffg2",
-			"rhsusf_shemagh_gogg_grn",
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02",
-			"rhs_6b47" 
+			"ItemGPS", 
+			"rhs_acc_dtk", 
+			"rhs_acc_pkas", 
+			"rhs_6b23_digi_6sh92", 
+			"rhs_6b28" 
 		};
 
-		uniformClass = "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK"; 
+		uniformClass = "rhs_uniform_vdv_emr_des"; 
 		backpack = "rhs_medic_bag"; 
 	}; 
 
@@ -703,21 +675,21 @@ class CfgRespawnInventory
 		role = "Support";
 		
 		weapons[] = { 
-			"rhs_weap_savz58v_ris_grip3" 
+			"rhs_weap_ak103_2" 
 		};
 
 		magazines[] = { 
 			"rhs_mag_rgd5", 
 			"rhs_mag_rgd5", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58" 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer" 
 		};
 
 		items[] = { 
@@ -743,17 +715,14 @@ class CfgRespawnInventory
 			"rhs_mine_tm62m",
 			"rhs_mine_pmn2",
 			"rhs_mine_pmn2",
-			"rhsgref_acc_zendl",
-			"rhs_acc_perst3",
-			"rhs_acc_rakursPM",
-			"rhs_acc_grip_ffg2",
-			"rhsusf_shemagh_gogg_grn",
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02",
-			"rhs_6b47"
+			"rhs_acc_dtk",
+			"rhs_acc_pkas",
+			"rhs_6b23_digi_6sh92",
+			"rhs_6b28"
 		};
 
-		uniformClass = "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK"; 
-		backpack = "UK3CB_B_Tactical_Backpack"; 
+		uniformClass = "rhs_uniform_vdv_emr_des"; 
+		backpack = "rhs_assault_umbts_engineer_empty"; 
 	};
 
 	class at_ru 
@@ -763,26 +732,26 @@ class CfgRespawnInventory
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa"; 
 	
 		weapons[] = { 
-			"rhs_weap_savz58v_ris_grip3", 
+			"rhs_weap_ak103_2", 
 			"rhs_weap_rpg7" 
 		};
 
 		magazines[] = { 
 			"rhs_mag_rgd5", 
 			"rhs_mag_rgd5", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
 			"rhs_rpg7_PG7VL_mag", 
 			"rhs_rpg7_PG7VL_mag", 
 			"rhs_rpg7_OG7V_mag", 
 			"rhs_rpg7_OG7V_mag", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58" 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer" 
 		};
 
 		items[] = { 
@@ -798,17 +767,14 @@ class CfgRespawnInventory
 			"ItemGPS",
 			"ACE_EarPlugs",
 			"ACE_MapTools",
-			"rhsgref_acc_zendl",
-			"rhs_acc_perst3",
-			"rhs_acc_rakursPM",
-			"rhs_acc_grip_ffg2",
-			"rhsusf_shemagh_gogg_grn", 
+			"rhs_acc_dtk", 
+			"rhs_acc_pkas", 
 			"rhs_acc_pgo7v2", 
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02", 
-			"rhs_6b47" 
+			"rhs_6b23_digi_6sh92", 
+			"rhs_6b28" 
 		};
 
-		uniformClass = "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK"; 
+		uniformClass = "rhs_uniform_vdv_emr_des"; 
 		backpack = "rhs_rpg_empty"; 
 	};
 
@@ -819,7 +785,7 @@ class CfgRespawnInventory
 		role = "Support";
 		
 		weapons[] = { 
-			"rhs_weap_savz58v_ris_grip3", 
+			"rhs_weap_ak103_2", 
 			"rhs_weap_igla" 
 		};
 
@@ -829,15 +795,15 @@ class CfgRespawnInventory
 			"rhs_mag_9k38_rocket", 
 			"rhs_mag_9k38_rocket", 
 			"rhs_mag_9k38_rocket", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58", 
-			"rhs_30Rnd_762x39mm_Savz58" 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer" 
 		};
 
 		items[] = { 
@@ -853,17 +819,14 @@ class CfgRespawnInventory
 			"ItemGPS",
 			"ACE_MapTools",
 			"ACE_EarPlugs",
-			"rhsgref_acc_zendl",
-			"rhs_acc_perst3",
-			"rhs_acc_rakursPM",
-			"rhs_acc_grip_ffg2",
-			"rhsusf_shemagh_gogg_grn", 
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02", 
-			"rhs_6b47" 
+			"rhs_acc_dtk", 
+			"rhs_acc_pkas", 
+			"rhs_6b23_digi_6sh92", 
+			"rhs_6b28" 
 		};
 
-		uniformClass = "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK"; 
-		backpack = "UK3CB_B_Tactical_Backpack"; 
+		uniformClass = "rhs_uniform_vdv_emr_des"; 
+		backpack = "rhs_tortila_emr"; 
 	};
 
 	class gren_ru 
@@ -873,7 +836,7 @@ class CfgRespawnInventory
 		role = "Assault";
 
 		weapons[] = { 
-			"rhs_weap_ak74n_2_gp25_npz" 
+			"rhs_weap_ak103_gp25" 
 		}; 
 
 		magazines[] = { 
@@ -889,15 +852,15 @@ class CfgRespawnInventory
 			"rhs_VOG25P", 
 			"rhs_VOG25P", 
 			"rhs_VOG25P", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK" 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer" 
 		};
 
 		items[] = { 
@@ -913,14 +876,11 @@ class CfgRespawnInventory
 			"ItemGPS",
 			"ACE_EarPlugs",
 			"ACE_MapTools",
-			"rhs_acc_dtk3",
-			"rhs_acc_rakursPM",
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02",
-			"rhs_6b47",
-			"rhsusf_shemagh_gogg_grn" 
+			"rhs_6b23_digi_6sh92", 
+			"rhs_6b28" 
 		};
 
-		uniformClass = "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK";
+		uniformClass = "rhs_uniform_vdv_emr_des";
 	};
 
 	class co_ru 
@@ -930,7 +890,7 @@ class CfgRespawnInventory
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa";
 	
 		weapons[] = { 
-			"rhs_weap_ak74n_2_gp25_npz", 
+			"rhs_weap_ak103_gp25", 
 			"Binocular" 
 		};
 
@@ -942,15 +902,15 @@ class CfgRespawnInventory
 			"rhs_VOG25", 
 			"rhs_VOG25", 
 			"rhs_VOG25", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK", 
-			"rhs_30Rnd_545x39_7N22_AK" 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer", 
+			"rhs_30Rnd_762x39mm_polymer" 
 		};
 
 		items[] = { 
@@ -966,14 +926,13 @@ class CfgRespawnInventory
 			"ItemGPS",
 			"ACE_MapTools",
 			"ACE_EarPlugs",
-			"rhsusf_shemagh_gogg_grn",
-			"rhs_acc_dtk3",
-			"rhsusf_acc_su230a",
-			"UK3CB_TKA_O_V_6b23_ml_Oli_02", 
-			"rhs_6b47" 
+			"rhs_acc_dtk", 
+			"rhs_acc_pkas", 
+			"rhs_6b23_digi_6sh92", 
+			"rhs_6b28" 
 		};
 
-		uniformClass = "UK3CB_CW_SOV_O_Late_U_VDV_Spetsnaz_Uniform_Gorka_02_KLMK"; 
+		uniformClass = "rhs_uniform_vdv_emr_des"; 
 		backpack = "tf_rt1523g_bwmod"; 
 	};
 };

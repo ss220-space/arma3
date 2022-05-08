@@ -12,3 +12,22 @@
 
 // Удаление мусора с баз - Shield 
 [] execVM "scripts\garbage.sqf";
+
+// Отображение меток только для одной стороны - Shield
+[] spawn {
+    while { !isDedicated } do {
+        waitUntil { sleep 1; alive player};
+        {
+            _arr = _x splitString "_";
+            _pre = _arr select 0;
+            if (_pre in ["WEST","EAST","GUER","CIV"]) then {
+                if (format["%1",side player] == _pre) then {
+                    _x setMarkerAlphaLocal 1;
+                } else {
+                    _x setMarkerAlphaLocal 0;
+                };
+            };
+            
+        } count allMapMarkers;
+    };
+};

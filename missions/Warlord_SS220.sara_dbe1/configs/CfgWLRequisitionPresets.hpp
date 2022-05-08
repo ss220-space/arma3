@@ -446,7 +446,7 @@ class CfgWLRequisitionPresets
 		{
 			class Vehicles
 			{
-				class UK3CB_MDF_B_M1030
+				class UK3CB_TKA_I_YAVA
 				{
 					cost=50;
 					requirements[]={};
