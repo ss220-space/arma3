@@ -11,8 +11,6 @@ if !(isDedicated) exitWith {};// нехуй на клиент вешать бе�
 			_x removePrimaryWeaponItem "optic_tws";
 			_x removeItems "optic_tws_mg";
 			_x removePrimaryWeaponItem "optic_tws_mg";
-			_x removeMagazines "Chemlight_red";
-			_x removeMagazines "Chemlight_green";
 		} forEach allUnits;
 
 		sleep 10;
