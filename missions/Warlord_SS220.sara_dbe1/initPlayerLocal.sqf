@@ -11,6 +11,7 @@ player disableAI "RADIOPROTOCOL";
 [player] remoteExec ["SS_fnc_Server_teamRestrict", 2];
 
 //Поставил после запроса, чтобы чела выкидывало ДО выдачи очков - зачем лишние просчеты
+sleep 15;
 waitUntil { ((hasInterface) && ((player getVariable "BIS_WL_funds")) >= 50)};
 
 ["ace_killed", {
@@ -38,7 +39,6 @@ if (_playerInPoints isEqualTo -1) then {
         private _playerPoints = ((_pointsArray select _playerInPoints) select 1);
         player setVariable ["BIS_WL_funds", _playerPoints, true];
     };
-};
 
 //Скоуп для того чтобы не засирать РПТ игрока ошибками и избежать ошибки что у него не будет очков - выдаем 500 и отправляем запрос на добавление в массив очков
 [] spawn = {
