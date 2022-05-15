@@ -92,7 +92,7 @@ ace_map_gestures_onlyShowFriendlys = false;
 
 // ACE Ð—ÐµÐ²Ñ
 force ace_zeus_autoAddObjects = true;
-force ace_zeus_canCreateZeus = 2;
+force ace_zeus_canCreateZeus = 0;
 force ace_zeus_radioOrdnance = false;
 force ace_zeus_remoteWind = false;
 force ace_zeus_revealMines = 0;
