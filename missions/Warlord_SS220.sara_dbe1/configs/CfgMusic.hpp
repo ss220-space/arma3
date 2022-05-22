@@ -50,27 +50,45 @@ import CUP_A2EWEW_Fallout from CfgMusic;
 import CUP_A2EWEW_MAD from CfgMusic;
 import CUP_A2EWEW_Sky_Net from CfgMusic;
 import CUP_A2EWEW_Wasteland from CfgMusic;
-import CUP_A2OA_Airborne from CfgMusic;
-import CUP_A2OA_Airborne_D from CfgMusic;
-import CUP_A2OA_Arrival from CfgMusic;
-import CUP_A2OA_Arrowhead from CfgMusic;
-import CUP_A2OA_Arrowhead_D from CfgMusic;
-import CUP_A2OA_Coltan_Blues from CfgMusic;
-import CUP_A2OA_Coltan_Blues_D from CfgMusic;
-import CUP_A2OA_Concrete_Cell from CfgMusic;
-import CUP_A2OA_Crude_Oil from CfgMusic;
-import CUP_A2OA_Dancing_Scimitar from CfgMusic;
-import CUP_A2OA_Death_From_Above from CfgMusic;
-import CUP_A2OA_Good_Morning_TStan from CfgMusic;
-import CUP_A2OA_Iron_Mountain from CfgMusic;
-import CUP_A2OA_Iron_Mountain_V from CfgMusic;
-import CUP_A2OA_Iron_Mountain_D1 from CfgMusic;
-import CUP_A2OA_Iron_Mountain_D2 from CfgMusic;
-import CUP_A2OA_Night_Visions from CfgMusic;
-import CUP_A2OA_Nightlife from CfgMusic;
-import CUP_A2OA_Revolver_Jam from CfgMusic;
-import CUP_A2OA_Warmongers from CfgMusic;
-import CUP_A2OA_Zargabad_Market from CfgMusic;
+import CUP_A2_Cold_Wind from CfgMusic;
+import CUP_A2_Vague_Shapes from CfgMusic;
+import CUP_A2_Indian_Summer from CfgMusic;
+import CUP_A2_Electronic_Warfare from CfgMusic;
+import CUP_A2_Cobalt from CfgMusic;
+import CUP_A2_Khe_Sanh_Riff from CfgMusic;
+import CUP_A2_Manhattan from CfgMusic;
+import CUP_A2_Reforger from CfgMusic;
+import CUP_A2_Defcon_Three from CfgMusic;
+import CUP_A2_Dead_Forest from CfgMusic;
+import CUP_A2_Insertion from CfgMusic;
+import CUP_A2_First_To_Fight from CfgMusic;
+import CUP_A2_Reinforcements from CfgMusic;
+import CUP_A2_Warpath from CfgMusic;
+import CUP_A2_Abandoned_Battlespace from CfgMusic;
+import CUP_A2_Last_Men_Standing from CfgMusic;
+import CUP_A2_Harvest_Red from CfgMusic;
+import CUP_A2_Movement_To_Contact from CfgMusic;
+import CUP_A2_Logistics from CfgMusic;
+import CUP_A2_Large_Scale_Assault from CfgMusic;
+import CUP_A2_The_Movement from CfgMusic;
+import CUP_A2_Sharping_Knives from CfgMusic;
+import CUP_A2_Close_Quarter_Combat from CfgMusic;
+import CUP_A2_Morning_Sortie from CfgMusic;
+import CUP_A2_Valentine from CfgMusic;
+import CUP_A2_Marauder_Song from CfgMusic;
+import CUP_A2_Ghost_Waltz from CfgMusic;
+import CUP_A2_Debriefing from CfgMusic;
+import CUP_A2_Badlands from CfgMusic;
+import CUP_A2_Rise_Of_The_Fallen from CfgMusic;
+import CUP_A1QG_Mission_02 from CfgMusic;
+import CUP_A1QG_Mission_02_outro from CfgMusic;
+import CUP_A1QG_Mission_03 from CfgMusic;
+import CUP_A1QG_Mission_03_outro from CfgMusic;
+import CUP_A1QG_Mission_04 from CfgMusic;
+import CUP_A1QG_Mission_04_outro from CfgMusic;
+import CUP_A1QG_Mission_05 from CfgMusic;
+import CUP_A1QG_Mission_05_outro from CfgMusic;
+import CUP_A1QG_Mission_06 from CfgMusic;
 
 class CfgMusic
 {
@@ -262,219 +280,393 @@ class CfgMusic
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Airborne: CUP_A2OA_Airborne
-	{
+	class Dynamic_CUP_A2_Cold_Wind: CUP_A2_Cold_Wind
+	{	
 		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Airborne.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\Cold_Wind.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Airborne_D: CUP_A2OA_Airborne_D
-	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+	class Dynamic_CUP_A2_Vague_Shapes: CUP_A2_Vague_Shapes
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Airborne_D.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\Vague_Shapes.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Arrival: CUP_A2OA_Arrival
-	{
-		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane"};
+	class Dynamic_CUP_A2_Indian_Summer: CUP_A2_Indian_Summer
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Arrival.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\Indian_Summer.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Arrowhead: CUP_A2OA_Arrowhead
-	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+	class Dynamic_CUP_A2_Electronic_Warfare: CUP_A2_Electronic_Warfare
+	{	
+		parameters[] = {"helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Arrowhead.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\Electronic_Warfare.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Arrowhead_D: CUP_A2OA_Arrowhead_D
+	class Dynamic_CUP_A2_Cobalt: CUP_A2_Cobalt
 	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Arrowhead_D.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Cobalt.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Coltan_Blues: CUP_A2OA_Coltan_Blues
+	class Dynamic_CUP_A2_Khe_Sanh_Riff: CUP_A2_Khe_Sanh_Riff
 	{
-		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane"};
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Coltan_Blues.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Khe_Sanh_Riff.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Coltan_Blues_D: CUP_A2OA_Coltan_Blues_D
-	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+	class Dynamic_CUP_A2_Manhattan: CUP_A2_Manhattan
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Coltan_Blues_D.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\Manhattan.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Concrete_Cell: CUP_A2OA_Concrete_Cell
-	{
-		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+	class Dynamic_CUP_A2_Reforger: CUP_A2_Reforger
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Concrete_Cell.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\Reforger.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Crude_Oil: CUP_A2OA_Crude_Oil
-	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+	class Dynamic_CUP_A2_Defcon_Three: CUP_A2_Defcon_Three
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Crude_Oil.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\Defcon_Three.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Dancing_Scimitar: CUP_A2OA_Dancing_Scimitar
+	class Dynamic_CUP_A2_Dead_Forest: CUP_A2_Dead_Forest
 	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Dancing_Scimitar.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Dead_Forest.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Death_From_Above: CUP_A2OA_Death_From_Above
+	class Dynamic_CUP_A2_Insertion: CUP_A2_Insertion
 	{
-		parameters[] = {"vehiclecombat", "plane", "helicopter"};
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Death_From_Above.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Insertion.ogg",
 			1,
 			1
 		};
 	};
-	class Helikopter
+	class Dynamic_CUP_A2_First_To_Fight: CUP_A2_First_To_Fight
 	{
-		name = "Helikopter";
-		sound[] = {"music\ogg\helikopter.ogg",1.0,1.0};
-		duration=98;
-		parameters[] = {"helicopter"}; 
-	};
-	class Dynamic_CUP_A2OA_Good_Morning_TStan: CUP_A2OA_Good_Morning_TStan
-	{
-		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Good_Morning_TStan.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\First_To_Fight.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Iron_Mountain: CUP_A2OA_Iron_Mountain
+	class Dynamic_CUP_A2_Reinforcements: CUP_A2_Reinforcements
 	{
-		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Iron_Mountain.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Reinforcements.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Iron_Mountain_V: CUP_A2OA_Iron_Mountain_V
+	class Dynamic_CUP_A2_Warpath: CUP_A2_Warpath
 	{
-		parameters[] = {"nighttime", "rain", "fog"};
+		parameters[] = {"vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Iron_Mountain_V.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Warpath.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Iron_Mountain_D1: CUP_A2OA_Iron_Mountain_D1
+	class Dynamic_CUP_A2_Abandoned_Battlespace: CUP_A2_Abandoned_Battlespace
 	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		parameters[] = {"nighttime", "submarine", "rain", "fog", "scubadive"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Iron_Mountain_D1.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Abandoned_Battlespace.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Iron_Mountain_D2: CUP_A2OA_Iron_Mountain_D2
-	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+	class Dynamic_CUP_A2_Last_Men_Standing: CUP_A2_Last_Men_Standing
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Iron_Mountain_D2.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\Last_Men_Standing.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Night_Visions: CUP_A2OA_Night_Visions
+	class Dynamic_CUP_A2_Harvest_Red: CUP_A2_Harvest_Red
 	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Night_Visions.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Harvest_Red.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Nightlife: CUP_A2OA_Nightlife
+	class Dynamic_CUP_A2_Movement_To_Contact: CUP_A2_Movement_To_Contact
 	{
-		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		parameters[] = {"vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Nightlife.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Movement_To_Contact.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Revolver_Jam: CUP_A2OA_Revolver_Jam
+	class Dynamic_CUP_A2_Logistics: CUP_A2_Logistics
 	{
-		parameters[] = {"daytime", "nighttime", "car", "tank", "boat", "helicopter", "plane", "rain", "fog"};
+		parameters[] = {"vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Revolver_Jam.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Logistics.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Warmongers: CUP_A2OA_Warmongers
+	class Dynamic_CUP_A2_Large_Scale_Assault: CUP_A2_Large_Scale_Assault
 	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		parameters[] = {"vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Warmongers.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Large_Scale_Assault.ogg",
 			1,
 			1
 		};
 	};
-	class Dynamic_CUP_A2OA_Zargabad_Market: CUP_A2OA_Zargabad_Market
+	class Dynamic_CUP_A2_The_Movement: CUP_A2_The_Movement
 	{
-		parameters[] = {"infantrycombat", "infantryfogcombat", "vehiclecombat"};
+		parameters[] = {"vehiclecombat", "infantrycombat", "infantryfogcombat"};
 		sound[]=
 		{
-			"@CUP\Terrains\cup_terrains_music\a2\oa\Zargabad_Market.ogg",
+			"@CUP\Terrains\cup_terrains_music\a2\ew\The_Movement.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Sharping_Knives: CUP_A2_Sharping_Knives
+	{	
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\Sharping_Knives.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Close_Quarter_Combat: CUP_A2_The_Close_Quarter_Combat
+
+	{
+		parameters[] = {"vehiclecombat", "infantrycombat", "infantryfogcombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Close_Quarter_Combat.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Morning_Sortie: CUP_A2_Morning_Sortie
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Morning_Sortie.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Valentine: CUP_A2_Valentine
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Valentine.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Marauder_Song: CUP_A2_Marauder_Song
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Marauder_Song.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Ghost_Waltz: CUP_A2_Ghost_Waltz
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "skydive", "vehiclecombat", "infantrycombat", "infantryfogcombat"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Ghost_Waltz.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Debriefing: CUP_A2_Debriefing
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Debriefing.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Badlands: CUP_A2_Badlands
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Badlands.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A2_Rise_Of_The_Fallen: CUP_A2_Rise_Of_The_Fallen
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a2\ew\Rise_Of_The_Fallen.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02: CUP_A1QG_Mission_02
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_02.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02_outro: CUP_A1QG_Mission_02_outro
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_02_outro.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02: CUP_A1QG_Mission_03
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_03.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02_outro: CUP_A1QG_Mission_03_outro
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_03_outro.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02: CUP_A1QG_Mission_04
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_04.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02_outro: CUP_A1QG_Mission_04_outro
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_04_outro.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02: CUP_A1QG_Mission_05
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_05.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02_outro: CUP_A1QG_Mission_05_outro
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_05_outro.ogg",
+			1,
+			1
+		};
+	};
+	class Dynamic_CUP_A1QG_Mission_02: CUP_A1QG_Mission_06
+	{
+		parameters[] = {"daytime", "car", "tank", "boat", "helicopter", "plane", "nighttime", "submarine", "rain", "fog", "scubadive"};
+		sound[]=
+		{
+			"@CUP\Terrains\cup_terrains_music\a1\qg\Mission_06.ogg",
 			1,
 			1
 		};
